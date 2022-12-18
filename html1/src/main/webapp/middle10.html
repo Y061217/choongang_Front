@@ -1,0 +1,62 @@
+<html lange="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 6일차 position 응용 중앙 위치</title>
+</head>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+
+
+.c {
+width:100px;
+height: 100px;
+background-color: black;
+position:absolute;
+/* absolute : margin : 0 auto;를 사용할 수 없기 때문에 다음과 같은 방법으로 오브젝트를 중앙에 위치 시킬 수 있다. */
+left:50%;
+margin-left: -50px;
+}
+
+
+.a1 {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+	position: absolute;
+	z-index: 1;
+}
+
+
+.a2 {
+	width: 100px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+	top:50px;
+	z-index: 2;
+}
+
+.a3 {	
+	width: 100px;
+	height: 100px;
+	background-color: olive;
+	position: absolute;
+	top:50px;
+	left: 50px;
+}
+
+/* absolute 태그의 순서와 관계 없이 오브젝트의 z축 (출력위치)를 변경할 수 있다. 이 때 z-index 속성을 이용 */
+</style>
+
+<body>
+
+<div class="c"></div>
+<div class="a1"></div>
+<div class="a2"></div>
+<div class="a3"></div>
+
+</body>
+</html>

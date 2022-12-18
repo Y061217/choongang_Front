@@ -1,0 +1,47 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML Day04 - QuickMenu + SVG 응용</title>
+</head>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.close {
+	display : block;
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	border-radius: 50px;
+	background-image: url("./close2.svg");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+/* 	배경이미지 적용 시 사이즈가 작을 경우, 
+	다중 출력되기 때문에 repeat 속성을 이용해서 
+	단일이미지를 적용할 수 있습니다. */
+	background-position: 10px 10px;
+	overflow: hidden;
+	
+}
+.close:hover {
+	background-color:yellow;
+	background-image: url("./close.svg");
+	
+}
+</style>
+
+<script>
+
+</script>
+<body>
+<img src="./menu1.png" width="50" height="50">
+<br>
+<img src="./login.svg" width="50" height="50">
+<br>
+<img src="./close2.svg" width="50" height="50">
+<span class="close">
+</span>
+</body>
+</html>

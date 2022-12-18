@@ -1,0 +1,76 @@
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Day01 HTML 2.0</title>
+</head>
+<body>
+<!-- 상위태그와 하위태그 -->
+	<!-- table : 표를 제작하기 위한 태그
+		 tr : a table row
+		 th : a table header cell
+		 td : a cell with in a table
+		 cellpadding : 안쪽여백
+		 cellspacing : 바깥쪽 여백
+		 bgcolor : 배경 색상
+		 colspan : 열 병합
+		 rowspan : 행 병합-->
+	<table border = "1" align="center" cellpadding="0" cellspacing="0">
+		<tr ><!-- tr에는 칸의 높이 값 적용 -->
+		<td >1</td><!-- td에는 칸의 너비 값 적용 -->
+		<td >2</td>
+		<td >3</td>
+		<td >4</td>
+		</tr>
+		
+		<tr>
+		<td>5</td>
+		<td>6</td>
+		<td>7</td>
+		<td>8</td>
+
+		</tr>
+		
+		<tr>
+		<td>9</td>
+		<td>10</td>
+		<td>11</td>
+		<td>12</td>
+
+		</tr>
+	</table>
+	
+<br><br><br><br><br>
+<!-- 퀴즈 실습(테이블) -->
+	<table border = "1" align="center" cellpadding="0" cellspacing="0">
+		<!-- 1행 시작-->
+		<tr height = "60"> 
+		<td colspan ="3"></td>
+		</tr>
+		<!-- 1행 끝 -->
+		
+		<!-- 2행 시작-->
+		<tr height = "35"> 
+		<td width = "100" bgcolor="#ccc"></td>
+		<td width = "300"></td>
+		<td width = "100" rowspan ="2"></td>
+		</tr>
+		<!-- 2행 끝 -->
+		
+		<!-- 3행 시작-->
+		<tr height = "35"> 
+		<td bgcolor="#ccc"></td>
+		<td></td>
+		</tr>
+		<!-- 3행 끝 -->
+		
+		<!-- 4행 시작-->
+		<tr height = "40"> 
+		<td colspan ="3"></td>
+		</tr>
+		<!-- 4행 끝 -->
+		
+	</table>
+		<!-- 해시코드 : 0 ~ F 대소문자 구분 X -->
+</body>
+</html>

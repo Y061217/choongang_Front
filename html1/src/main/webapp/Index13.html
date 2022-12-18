@@ -1,0 +1,60 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML Day03 - HTML 4.0 New tag Slide Menu</title>
+</head>
+<style>
+body {
+	margin:0;
+	padding:0;
+}	
+.bbd {
+width:800px;
+height:800px;
+
+}
+/* 상위태그 : 하위태그 너비 만큼 width값을 적용해야 함 
+	하위 태그에 width 값 외에 border값이 있을 경우 해당 bortder수치 만큼 포함하여 적용*/
+.menu {
+width: 612px;
+height: 30px;
+list-style: none;
+background-color: yellow;
+margin: 0;
+padding: 0;
+}
+/* 하위 태그는 한개의 오브젝트 크기를 설정하셔야 합니다. */
+.menu_li {
+width: 100px;
+height: 30px;
+border: 1px solid red;
+float:left;
+/* float : 오브젝트의 위치를 변경할 때 사용되는 속성 
+	left(슬라이드 메뉴) , center(드롭 메뉴) , right*/
+
+
+
+}
+</style>
+<body>
+<object data="./video.webm" class="bbd">
+</object>
+<br>
+<br>
+A<sub>4</sub> <!-- 아래첨자 -->
+B<sup>5</sup> <!-- 윗첨자 -->
+H<sub>2</sub>O
+
+<br>
+<br>
+
+<ul class="menu">
+	<a href="http://naver.com"><li class="menu_li menu1">메뉴 1</li></a>
+	<a href="./Index12.html"><li class="menu_li menu2">메뉴 2</li></a>
+	<li class="menu_li menu1">메뉴 3</li>
+	<li class="menu_li menu2">메뉴 4</li>
+	<li class="menu_li menu1">메뉴 5</li>
+	<li class="menu_li menu2">메뉴 6</li>
+</ul>
+</body>
+</html>

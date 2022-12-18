@@ -1,0 +1,86 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 6일차 - position</title>
+</head>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+div {
+	width: 100px;
+	height: 100px;
+}
+.bx1 {
+	background-color: black;
+	position: static;
+	margin-top: 50px;
+}
+
+.bx2 {
+	background-color: blue;
+	position: relative;
+
+}
+
+.bx3 {
+	background-color: orange;
+	position: relative
+
+	
+}
+
+.t1 {
+	display: block;
+	width: 500px;
+	height: 500px;
+	background-color: olive;
+	position: static;
+
+}
+
+.t2 {
+	width : 100px;
+	height: 100px;
+	background-color: purple;
+	position: relative;
+	margin-left: 200px;
+	top: 200px;
+}
+
+.t3 {
+	width : 100px;
+	height: 100px;
+	background-color: blue;
+	position: absolute;
+	top : 500px;
+	left: 100px;
+}
+
+/* position : 오브젝트의 속성을 변화시키는 역할 */
+/* static : 다른 오브젝트와 겹쳐질 수 없지만 위에 덮히는 건 가능.
+   relative : 중간 레이어 자신의 영역 50%, 오브젝트 간 겹쳐질 수 있다. 
+   absolute : 상위태그가 relative일 경우에만 종속되며, static일 경우 브라우저에 종속됨
+   			relatvie : relatvie
+   			relatvie : absolute
+   			absolute : relatvie
+   			absolute : absolute
+   			 
+   */
+   
+</style>
+<body>
+
+<div class="bx1"></div>
+<div class="bx2"></div>
+<div class="bx3"></div>
+
+<br>
+<br>
+
+<span class="t1"><div class="t2"></div></span>
+<span class="t1"><div class="t3"></div></span>
+
+</body>
+</html>
