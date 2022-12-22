@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+
+<title>ECMA - es5,es6</title>
+<script>
+// ECMA 5, 6, 7, 8 버전 데이터 암호화
+// 	let data = window.location.search;
+// 	var id = (data.split("?userid="));
+// 	console.log(id);
+// 	var str = decodeURIComponent(id[1]);
+// 	var redata = atob(str);
+// 	console.log(redata);
+	var a = ["뉴진스","아이브"];
+	var b = ["아이유","아이들"];
+	const bdata = [...a,...b];
+	console.log(bdata);
+	//es6
+	var cdata = a;
+	cdata.push(...b);
+	console.log(cdata);
+	
+	//es5 ~ es6 배열함수
+	function aa(...a1){
+		console.log(a1[0],a1[1],a1[2]);
+		
+	}
+	aa(10,15,20);
+</script>
+</head>
+<body>
+
+</body>
+</html>

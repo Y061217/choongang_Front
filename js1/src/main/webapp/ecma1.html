@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+
+<title>ECMA - es7</title>
+<script>
+// ECMA 5, 6, 7, 8 버전 데이터 암호화
+// btoa : 문자 또는 숫자를 암호화 기능 (base64)
+// atob : 암호화된 코드를 디코딩 (base64)
+function abc(){
+	var mid = btoa(document.getElementById("mid").value);
+	f.userid.value = mid;
+	f.submit();
+}
+</script>
+</head>
+<body>
+<form name="f" id="f" method="get" action="./ecma2.html" onsubmit="abc()">
+<input type="hidden" name="userid">
+<input type="text" id="mid"><br>
+<input type="button" onclick="abc()" value="전송">
+</form>
+</body>
+</html>
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>ECMA - es7</title>
+<script>
+var a = function abc(){
+	console.log("강민경");
+}
+a(); //함수명 노출 방지
+
+var b=()=>{
+	console.log("이해리");
+	
+	
+}
+
+let test = {
+	aaa : "미연", /// aaa=가상변수
+	bbb : function(){ //내부함수
+		var msg = this.aaa + "님 환영합니다.";
+		console.log(msg);
+	},
+	
+}
+
+</script>
+</head>
+<body>
+<button type="button" onclick="a()">클릭</button>
+<button type="button" onclick="b()">클릭2</button>
+<button type="button" onclick="test.bbb()">클릭3</button>
+<br><br><br><br>
+<button type="button" id="btn">ECMA7</button>
+</body>
+<!-- <script src="./ecma3.js"></script> -->
+<!-- ecma7~ -->
+<script type="module">
+	import {a,ccc} from "./ecma3.js?v=2"; 
+	document.querySelector("#btn").addEventListener("click", ccc);
+</script>
+<!-- import 기능으로 필요한 함수만 선택적으로 가동 가능 리소스, 시간 효율성 증가 -->
+</html>

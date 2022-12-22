@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width">
+<title>Ajax - CORS 해제기능</title>
+<script src="./jquery.js"></script>
+<script>
+	$(function(){
+		$("#btn").click(function(){
+			if($("#mid").val()==""){
+				alert("아이디를 입력하세요");
+			}
+			else{
+				var $id = $("#mid").val();
+				$.fn.call($id);	
+			}
+		});
+		
+		var $oksign;
+		
+		$.fn.call = function($id){
+			$.ajax({
+				url : "http://172.30.1.9:8080/js1/ajax4.jsp",
+				cache : false,
+				type : "POST",
+				dataType : "html",
+				data:{
+					"userid" : $id
+				},				
+				contentType:"application/x-www-form-urlencoded",
+				success:function($data){
+					console.log($data);
+				},
+				error:function(){
+					console.log("서버 및 데이터 오류발생!!");	
+				}
+			});
+		}
+		
+	});
+</script>
+</head>
+
+<body>
+<!-- userid값 전송 -->
+<input type="text" id="mid"><br>
+<button type="button" id="btn">중복체크</button>
+
+
+
+</body>
+</html>
