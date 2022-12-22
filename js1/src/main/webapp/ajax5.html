@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>Ajax 2일차 - jquery 연동 (GET)</title>
+<script src="./jquery.js"></script>
+<script>
+$(function(){
+	let $data; //데이터를 저장하기 위한 변수
+	$("#btn").click(function(){
+		//.ajax란 jquery 전용 ajax 함수입니다.
+		$.ajax({
+			url:"./ajax3.json", //url : 파일 경로 또는 호출할 파일명
+			cache:false, //cache : 해당 파일을 메모리에 저장하는 속성
+			type:"GET", //POST OR GET 으로 설정
+			dataType:"json", //url 파일의 유형 XML,HTML,TXT, 등 여러 타입이 있음
+			success:function($data){ //success : 정상적인 통신 신호 발생 시
+				console.log($data);
+				
+			},
+			error:function(){ //error : 404 또는 401,402 등 문제가 발생 시 출력됨
+				console.log("서버 접속 및 파일이 올바르지 않습니다.");
+			},
+		});
+	});
+});
+</script>
+</head>
+<body>
+<!-- HTML5전용 태그이며 기본형은 submit 기능이고 reset, button 등이 사용된다. 시멘틱 마크업-->
+<button type="button" id="btn">전송</button>
+</body>
+</html>

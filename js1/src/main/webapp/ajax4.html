@@ -7,7 +7,7 @@
 <title>Ajax 2일차 - 파라미터를 배열로 전송</title>
 <script src="./jquery.js"></script>
 <!-- 공통으로 사용하는 return 함수들 -->
-<script src="./ajax3.js?v=1"></script>
+<script src="./ajax3.js?v=3"></script>
 <script>
 function abc(){
 	var data = [];
@@ -42,11 +42,27 @@ function abc(){
 <script>
 function id_ck(){
 	var id = document.getElementById("mid");
-	if(id.value=="">{
+	if(id.value==""){
 		alert("입력");
-	} else {
-		
-	}
+		}
+	
+		else {
+			//ajax post전송시 '?'는 사용하지 않는다. 그 외의 추가 데이터는 &로 구분하여 전송
+			var adata = "userid="+id.value;
+			//adata += "&userpw="+pw.value;
+			ajax("POST","./ajax4.jsp",adata);
+			setTimeout(anser,500); //응답 대기 시간 추가
+			}
+			
+}
+
+function anser(){
+	if(data == "ok"){
+		alert("ok");
+		}
+		else {
+			alert("no");
+		}
 }
 </script>
 <!-- <form method="post" enctype="application/x-www-form-urlencoded" enctype="multiple"> </form>//post전송시 암호화 multiple = 첨부파일 있을때 -->
