@@ -1,0 +1,81 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>웹 표준기술-문제5</title>
+</head>
+
+<script>
+function login(){
+	
+	var mid = document.getElementById("mid").value;
+	var mpass = document.getElementById("mpass").value;
+	var mbz1 = document.getElementById("mbz1").value;
+	var mbz2 = document.getElementById("mbz2").value;
+	var mbz3 = document.getElementById("mbz3").value;
+	if(mid.length < 5 || mid.length > 15) {
+		alert("아이디는 최소 5자 ~ 최대 15자 입니다.");
+	} 
+	else if(mpass.length <= 3 ) { 
+		alert("패스워드는 최소 4자 이상 입력하세요.");
+	} 
+	else if(mbz1.length != 3 || mbz2.length != 2 || mbz3.length != 5) 
+		{
+		alert("올바른 사업자 번호를 입력하세요.");}
+	else {
+		f.submit();
+	}
+		
+}
+
+/* 	
+ * function login(){
+	var mid = document.getElementById("mid");
+	var mpass = document.getElementById("mpass");
+	var mbz1 = document.getElementById("mbz1");
+	var mbz2 = document.getElementById("mbz2");
+	var mbz3 = document.getElementById("mbz3");
+
+	if(mid.value==""){
+		alert("아이디를 입력하세요.");
+	}
+	else if(mpass.value==""){
+		alert("패스워드를 입력하세요.");
+	}
+	else if(mbz1.value == "" && mbz2.value == "" && mbz3.value == ""){
+		alert("사업자 번호를 입력하세요.");
+	} else {
+		length_ck(mid,mpass,mbz1,mbz2,mbz3);
+	}
+}
+ 확장함수 활용
+ 
+ function length_ck(mid,mpass,mbz1,mbz2,mbz3){
+	 if(mid.value.length < 5){
+		 alert("아이디는 최소 5자에서 최대 15자 입니다.");
+	 } else if(mpass.value.length < 4){
+		 alert("패스워드는 최소 4자 이상 입력하세요.");
+	 } else if(mbz1.length < 3 && mbz2.length < 2 && mbz3.length < 5){
+		 alert("올바른 사업자 번호를 입력하세요.");
+	 }
+ }
+ 
+ */
+</script>
+
+<body>
+<form id = "f" name = "f" method="post" action="http://coupang.com">
+아이디 <input type = "text" placeholder="아이디를 입력하세요." id="mid" name="mid">
+<br>
+패스워드 <input type = "password" placeholder="패스워드를 입력하세요." id="mpass">
+<br>
+사업자번호 <input type = "text" placeholder="3자리" maxlength = "3" id="mbz1">
+ - 
+ <input type = "text" placeholder="2자리" maxlength = "2" id="mbz2">
+ - 
+ <input type = "text" placeholder="5자리" maxlength = "5" id="mbz3">
+<br>
+<input type = "button" value = "로그인" class = "login" onclick="login()">
+</form>
+
+</body>
+</html>

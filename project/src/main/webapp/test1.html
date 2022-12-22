@@ -1,0 +1,49 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>웹 표준기술-문제1</title>
+</head>
+<style>
+body {margin : 0; padding : 0;}
+.blue {
+	width : 1000px;
+	height : 55px;
+	background-color : blue;
+	position : relative;
+	padding-top : 15px;
+	}
+.gray {
+	width : 200px;
+	height : 40px;
+	background-color : gray;
+	position : absolute;
+	left : 20px;
+	}
+.yellow {
+	width : 100px;
+	height : 40px;
+	background-color : yellow;
+	position : absolute;
+	right : 120px;
+	}
+.black {
+	width : 100px;
+	height : 40px;
+	background-color : black;
+	position : absolute;
+	right : 20px;
+	}
+.left {right : 320px;}
+.right {right : 220px;}
+</style>
+
+<body>
+<div class="blue">
+	<div class="gray"></div>
+	<div class="yellow"></div>
+	<div class="black"></div>
+	<div class="yellow left"></div>
+	<div class="black right"></div>
+</div>
+</body>
+</html>

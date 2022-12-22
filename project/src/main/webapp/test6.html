@@ -1,0 +1,54 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>웹 표준기술-문제6</title>
+</head>
+
+<script>
+function abc(){
+	var new_pass = document.getElementById("new_pass").value;
+	var same = document.getElementById("same").value;
+	if(new_pass.length < 6){
+		alert("비밀번호는 최소 6자리 이상 입력 되어야 합니다.");
+		} else {
+			if(new_pass == same) {
+				if(confirm("비밀번호를 변경하시겠습니까?")==true){
+					alert("새로운 비밀번호가 적용 되었습니다.");}
+				 else {
+					alert("기존 비밀번호를 유지합니다.");}
+	
+		} else {
+			alert("동일한 비밀번호를 입력하세요.");
+		}
+	}
+}
+</script>
+
+<style>
+.btn {
+	background-color : #afe1ff;
+	color : white;
+	border-color : #afe1ff;
+	border-radius : 5px;
+}
+
+.bx {
+	width : 200px;
+}
+
+.scss {
+	display : block;
+	width : 170px;
+	float : left;
+}
+</style>
+<body>
+<span class="scss">신규 비밀번호</span>
+<input type = "password" placeholder ="생성할 비밀번호를 입력하세요" id="new_pass" class="bx">
+<br>
+<span class="scss">동일한 비밀번호</span>
+<input type = "password" placeholder ="패스워드를 입력하세요." id="same" class="bx">
+<br>
+<input type = "button" value = "비밀번호 변경" onclick="abc()" class = "btn">
+</body>
+</html>
