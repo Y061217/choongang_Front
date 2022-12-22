@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>Ajax 1일차 - 기초(js)</title>
+</head>
+<script src="jquery.js"></script>
+<script>
+$(function(){
+	//?ps=1&pr=80000&no=103
+var $uria = window.location.search;
+console.log($uria);
+
+var $uri_no = $uria.split("&no=");
+var $uri_pr = $uri_no[0].split("&pr=");
+var $uri_ps = $uri_pr[0].split("?ps=");
+var $all = {'index_no' : [$uri_no[1]],
+			'price' : [$uri_pr[1]],
+			'person' : [$uri_ps[1]]
+			};
+console.log($uri_no[1]);
+console.log($uri_pr[1]);
+console.log($uri_ps[1]);
+console.log($all);
+
+var $lihtml = "<li>방 번호 : "+$uri_no[1]+"</li>"
+				+"<li>요금 : "+$uri_pr[1]+"</li>"+
+				"<li>방문 인원 수 : "+$uri_ps[1]+"</li>"
+
+			$("#view").html($lihtml);
+
+
+	
+	
+})
+
+</script>
+<body>
+<ul id="view">
+</ul>
+
+</body>
+</html>

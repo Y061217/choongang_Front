@@ -1,0 +1,30 @@
+@charset "UTF-8";
+@import url("./index.css");
+
+ul {
+	position: absolute;
+	right: 5px;
+}
+
+	.licss {
+		display:inline-block;
+		height : 30px;
+		text-align: center;
+		line-height: 30px;
+		font-family: 'Nanum Gothic', sans-serif;
+		font-size : 13px;
+
+	}
+ul > .licss:after{
+	content : " |";
+	
+}
+
+
+ul > .licss:nth-child(4):after{
+	content : "";
+	
+}
+	.licss:hover{
+		color : orange;
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>펜션예약 시스템 - 인원 및 금액 확인</title>
+</head>
+<script src="jquery.js"></script>
+<script>
+const $room = {
+		  "index_no":[101,102,103,104],
+		  "room_name":["아로하 향이 가득한 그린 하우스","소나무 향이 가득한 파인 하우스","온 가족이 편하게 지낼 수 있는 패밀리 하우스","로즈향이 가득한 퍼플 하우스"],
+		  "imgs":["./01.jpg","./02.jpg","./03.jpg","./04.jpg"],
+		  "person_limit":["4","6","8","2"],
+		  "room_case":["1","2","3","1"]
+		};
+
+		const $paypart =
+		{
+		"payment":["신용카드","무료쿠폰결제","계좌이체","휴대폰결제","도서상품권","무통장 입금","포인트결제"]
+		}
+
+		//?room=102&ps=5&r_price=200000
+
+
+
+
+$(function(){
+		var $uri = window.location.search;
+		var $price = $uri.split("&r_price=");
+		//console.log($price[1]);	//최종금액
+		var $ps = $price[0].split("&ps=");
+		//console.log($ps[1]);	//확정인원
+		var $room_no = $ps[0].split("?room=");
+		//console.log($room_no[1]);	//방번호
+		$("#room_user").text($ps[1]);
+		$("#room_money").text(Number($price[1]).toLocaleString());
+		
+		//console.log($room);
+		
+		var $idx="";	//배열번호 확인
+			
+		//방 고유번호만 검토
+		$.each($room["index_no"],function($a1,$a2){
+			if(Number($room_no[1])==$a2){
+				$idx = $a1;	//조건에 맞는 배열번호를 이관함	
+				}
+			});
+		//$("#room_img").html($room["imgs"][$idx]);
+			
+			
+		$.each($room,function($b1,$b2){
+			//console.log($b1);
+			var $idname = "#"+$b1;
+				
+			if($b1=="index_no"){
+				$($idname).val($room[$b1][$idx]);
+			}
+				
+			else if($b1=="imgs"){
+				$($idname).html("<img src='"+$room[$b1][$idx]+"' style='width:100px;'>");
+			}
+			else{
+				$($idname).text($room[$b1][$idx]);
+			}
+			
+		});
+	
+		//결제수단 리스트 출력
+		/* <lable>
+		<input type="button" value="결제선택">
+		<!-- 최종 결제선택 후 출력되는 메세지 -->
+		<span id="pay_msg"></span>
+		</lable> */
+		
+		console.log($paypart);
+		
+		$.map($paypart["payment"],function($c1,$c2){
+			var $html="";
+			
+			if($c2==0 || $c2==2 || $c2==3 || $c2==5){
+				//신용카드 기본 체크
+				if($c2==0){ //조건에 맞는 옵션을 checked 값을 적용
+					var $checked = "checked";
+				}
+			$html = "<label>\
+			<input type='radio' name='pay' value='"+$c1+"' "+$checked+">\
+			"+$c1+"\
+			</label>";
+			}
+			//append : 실제 오브젝트 값을 
+			//노드로 html로 출력시키는 함수
+			$("#pays").append($html);
+		});
+			
+			
+				
+		
+		
+	});
+</script>
+
+
+<body>
+<input type="hidden" id="index_no">
+<div id="imgs"></div>
+<ul>
+<li>방이름 : <span id="room_name"></span></li>
+<li>총 인원<span id="person_limit"> 인</span></li>
+<li>방 <span id="room_case"></span> 개</li>
+<li>방문인원 : <span id="room_user"></span> 인</li>
+<li>결제금액 : <span id="room_money"></span> 원</li>
+</ul>
+<br><br>
+결제수단 : 
+<div id="pays">
+<!-- 
+<label><input type="radio" value="신용카드">
+신용카드
+</label>
+-->
+</div>
+<input type="button" value="결제선택" id="btn">
+<!-- 최종 결제선택 후 출력되는 메세지 -->
+<span id="pay_msg"></span>
+
+
+</body>
+</html>
+

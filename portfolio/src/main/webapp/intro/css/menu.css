@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.div_menu{
+	width : 1200px;
+	height :inherit;
+	margin: 0 auto;
+	background-color: black;
+}
+
+.div_menu > span {
+	width : 150px;
+	height: inherit;
+	line-height: 110px;
+	float: left;
+	margin-right: 100px;
+}
+
+.div_menu > ol{
+	width : 850px;
+	height: inherit;
+	font-family: 'Nanum Gothic', sans-serif;
+	color : white;
+
+} 
+
+.div_menu > ol > li{
+	float: left;
+	width : calc(600px/6);
+	height : inherit;
+	line-height: 80px;
+	cursor: pointer;
+	
+}

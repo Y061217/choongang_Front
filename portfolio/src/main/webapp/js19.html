@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>js 7일차 - HTML5 전체 레이아웃 태그</title>
+<link rel="stylesheet" type="text/css" href="./js19.css?v=1">
+</head>
+<script>
+function popup_close(){
+	//스크립트에서 스타일을 변경할 수 있으며, 다음과 같은 규칙이 있습니다.
+	//style.display or style.width or style.color 등등
+	//style. 중 "-" 가 있는 속성은 - 를 제거하고 바로 뒷글자를 대문자로 표현
+	//ex : font-size => fontSize
+	document.getElementById("popup").style.display="none";
+	
+}
+</script>
+
+<body>
+<figure class="popup" id = "popup">
+	<span class="close" onclick="popup_close()">X</span>
+</figure>
+<header>
+<div class="top">
+
+</div>
+</header>
+<nav>
+<div class="menu">
+</div>
+</nav>
+<main>
+<aside class="floor">
+
+</aside>
+<section class="section_banner">
+	<div class="banner1"></div>
+
+
+</section>
+
+<section class="section_product">
+<div class="product"></div>
+
+</section>
+
+<section class="section_board">
+	<div class="board">
+	<article class="notice"></article>
+	<article class="event"></article>
+	</div>
+</section>
+
+
+
+
+</main>
+<footer>
+	<div class="copyright"></div>
+</footer>
+
+
+</body>
+</html>
