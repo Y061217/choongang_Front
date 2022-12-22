@@ -1,0 +1,77 @@
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>시험 연습 8 - HTML + JS 연동</title>
+</head>
+
+<style>
+.ulcss {
+	width : 277px;
+	height : 90px;
+	list-style: none;
+	padding : 0;
+	margin : 0;
+}
+
+p{
+	padding : 0;
+	margin : 0;
+}
+li {
+	width : 100px;
+	height : 30px;
+	float: left;
+}
+
+.pnm {
+	width  : 177px;
+}
+.pmoney {
+	width : 100px;
+}
+.pea {
+	width : 70px;
+}
+</style>
+
+<script>
+function c(){
+	var ck1 = document.getElementById("ck").checked;
+	var pnm = "삼성 모던 핸드폰 케이스";
+	var pmoney = "15000";
+	var pea = 5;
+	if (ck1 == true){
+		document.getElementById("pnm").value = pnm;
+		document.getElementById("pmoney").value = pmoney;
+		document.getElementById("pea").value = pea;
+		
+	} else {
+		document.getElementById("pnm").value = ""
+		document.getElementById("pmoney").value = ""
+		document.getElementById("pea").value = 1;
+	}
+	
+}
+</script>
+
+<body>
+
+<p>
+<input type = "checkbox" id = "ck" onclick="c()">  해당 상품 정보를 로드 하시겠습니까?
+</p>
+<ul class="ulcss">
+	<li>상품명</li>
+	<li><input type = "text" placeholder="상품명을 입력하세요" id = "pnm" class = "pnm"></li>
+	<li>상품 금액</li>
+	<li><input type = "text" placeholder="상품 금액" id = "pmoney" class ="pmoney"></li>
+	<li>상품수량</li>	
+	<li><input type = "text" value="1" id = "pea" class ="pea"></li>
+	
+
+</ul>
+
+</body>
+
+
+
+</html>

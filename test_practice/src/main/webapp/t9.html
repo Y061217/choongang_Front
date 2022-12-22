@@ -1,0 +1,49 @@
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>시험 연습 9 - HTML + JS 연동 2</title>
+</head>
+
+
+<script>
+function send(){
+	var frs = document.getElementById("fst").value;
+	var scn = document.getElementById("scn").value;
+	var thr = document.getElementById("thr").value;
+	var f = document.getElementById("f");
+	
+	if (frs.length == 3 && scn.length >= 3 && thr.length == 4){
+		f.submit();
+	} else {
+		alert("정상적인 휴대폰 번호를 입력하세요.")
+	}
+	
+	
+	
+}
+</script>
+
+<style>
+.bx {
+	background-color : black;
+	color : white;
+	border-radius : 10px;
+}
+</style>
+
+<body>
+
+
+<form id = "f" method = "post" action = "http://choongang.co.kr">
+<p>
+휴대폰 인증 서비스 : 
+<input type = "text" id = "fst" name = "fst" maxlength="3">
+ - 
+<input type = "text" id = "scn" name = "scn" maxlength="4">
+ -  
+ <input type = "text" id = "thr" name = "thr" maxlength="4"> 
+ <input type = "button" value = "회원 인증" class = "bx" onclick = "send()">
+</p>
+</form>
+</body>
+</html>

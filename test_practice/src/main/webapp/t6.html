@@ -1,0 +1,54 @@
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>시험 연습 6 - js 반복문 & 조건문 (면접 기출) </title>
+</head>
+<!-- 45 5 * 9 -->
+<!-- 40 5 * 8 -->
+<!-- 35 5 * 7 v -->
+<!-- 30 5 * 6 -->
+<!-- 25 5 * 5 v -->
+<!-- 20 5 * 4 v  -->
+<!-- 15 5 * 3 -->
+<!-- 10 5 * 2  -->
+<!-- 5  5 * 1 v -->
+
+<script>
+var a;
+var x=5;
+for(a=7;a>0;a--){
+	if (a == 7 || a == 5 || a == 4 || a == 1){
+		var b = x * a;
+		console.log(b);}
+	
+}
+
+var a=7;
+do{
+	var b = x * a;
+	switch (a) {
+	case 7: 
+		console.log(b);
+		break;
+	case 5:
+		console.log(b);
+		break;
+	case 4:
+		console.log(b);
+		break;
+	case 1:
+		console.log(b);
+		break;
+
+	}
+	a--;
+}while(a > 0);
+
+
+
+</script>
+
+<body>
+
+</body>
+</html>
