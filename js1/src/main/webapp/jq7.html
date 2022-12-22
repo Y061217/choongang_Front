@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>Jquery 2일차 - hidden 속성 사용하기</title>
+
+</head>
+<script src="./jquery.js"></script>
+<script>
+$(function(){
+	$("#btn").click(function(){
+		var $uri = window.location.search;
+		var $agree = $uri.split("&a=");
+		$("#agree").val($agree[1]);
+		var $cost = $agree[0].split("&money=");
+		var $sales = $cost[1]*0.8;
+		$("#total").val($sales);
+		var $id = $cost[0].split("?mid=");
+		$("#mid").val($id[1]);
+		$("#f").submit();
+		});
+	
+})
+
+
+
+</script>
+</head>
+<body>
+<form id="f" name="f" method="get" action="">
+<input type="hidden" name="mid" id="mid">
+<input type="hidden" name="agree" id="agree">
+<input type="hidden" name="total" id="total">
+<input type="text" name="person" id="person">
+<input type="button" value="확인" id="btn">
+<input type="button" value="확인" onclick="btnb()">
+</form>
+</body>
+</html>

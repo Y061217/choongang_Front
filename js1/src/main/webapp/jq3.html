@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>Jquery 2일차 - Jquery 문법</title>
+</head>
+<script src="./jquery.js"></script>
+<script>
+
+$(function(){
+//id로 html 태그를 핸들링함
+//name 검토를 못함
+// 	$("#bnt").on('click',function(){ //(구)버전
+		
+// 	});
+	
+
+	$("#btn").click(function(){ //click(function(){}) : onclick
+		var $a = $("#mid").val();//해당 id의 value값 호출
+		$("#mid").val("강감찬"); //해당 id에 value값 변경
+
+	});
+	
+	var $z = 0;
+	$("#cal").click(function(){
+	var $m1 = $("#m1").val();
+	var $m2 = $("#m2").val();
+	var $sum = $m1 * $m2;
+	$z++;
+	console.log($sum);
+	console.log("클릭횟수 :"+$z);
+	})
+	
+	
+
+});
+</script>
+<body>
+<input type="text" name="mid" id="mid">
+<input type="button" value="클릭" id="btn">
+<br>
+
+응용문제2.
+사용자가 두개의 숫자값을 입력하면, 해당 두개의 값을 곱하는 코드를 작성하시오.
+<br>
+<input type="text" name="mid" id="m1">
+<input type="text" name="mid" id="m2">
+<input type="button" value="클릭" id="cal">
+</body>
+</html>

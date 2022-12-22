@@ -1,0 +1,53 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 2일차 - 반복문(while)</title>
+</head>
+<script>
+/* for(시작값;종료값;증가또는감소)
+var a=1; //while문에 시작값
+	while (a <= 10) { //(종료값)
+		console.log(a);
+		a++; //증가 또는 감소
+	}
+
+응용문제 1. 15 ~ 4까지 출력되는 while문 작성 
+var a=15;
+	while(a > 3) {
+		console.log(a);
+		a--;
+	}
+응용문제 2. 20 ~ 40 까지 모든 숫자를 다 더한 결과값을 출력 
+var	a=20;
+var sum=0;
+	while(a <= 40){
+		sum += a;
+		a++;
+	}
+	console.log(sum);
+
+	구구단 5단 중 홀수 결과 값만 모두 더하는 코드를 작성하시오.
+*/
+var g=5;
+var i=1;
+var sum = 0;
+while(i<10){
+	var s = g * i;
+		if(s % 2 == 1) //나머지가 1로 결과값이 떨어지는 홀수 조건
+			{	sum += s;	//해당 곱한 결과값을 누적시키는 코드
+		}
+		else {
+			
+		}
+	
+	i++;
+	
+}
+console.log(sum); //결과값 출력
+
+
+</script>
+<body>
+
+</body>
+</html>

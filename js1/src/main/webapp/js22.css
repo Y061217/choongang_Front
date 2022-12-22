@@ -1,0 +1,53 @@
+@charset "UTF-8";
+body{
+	margin:0;
+	padding:0;
+	background-color: #afe1ff;
+	
+}
+/*실제 실무자 셋팅*/
+label,span{
+	display: block;
+}
+ul,ol{
+	list-style: none;
+	margin:0;
+	padding: 0;
+}
+
+
+.banner{
+	height:490px;
+	
+}
+
+.view{
+	width:1000px;
+	height:490px;
+	margin: 0 auto;
+	position: relative;
+	
+}
+
+
+.disc{
+	width : 100%;
+	position: absolute;
+	bottom:30px;
+	text-align:center;
+	height: 20px;
+
+}
+
+.licss{
+	width: 20px;
+	height: 20px;
+	background-color: black;
+	border-radius: 20px;
+	display: inline-block; /* inline-block : block + float + margin */
+	
+}
+
+.red{
+	background-color: red;
+}

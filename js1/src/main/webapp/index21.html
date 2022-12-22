@@ -1,0 +1,84 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 2일차 - HTML 연동 3</title>
+
+</head>
+
+<style>
+body {
+	margin : 0;
+	padding : 0;
+	}
+	
+#sum {
+	float : left;
+	
+}
+</style>
+
+
+<body>
+<!-- <p>개인정보 확인</p>
+<table border = "1" cellpadding = "0" cellspacing ="0">
+	<tr>
+		<td>아이디</td>
+		<td id="mid"></td>
+	</tr>
+</table>
+
+<table border = "1" cellpadding = "0" cellspacing ="0">
+	<tr>
+		<td>이메일</td>
+		<td id="memail"></td>
+	</tr>
+</table>
+
+<table border = "1" cellpadding = "0" cellspacing ="0">
+	<tr>
+		<td>연락처</td>
+		<td id="mtel"></td>
+	</tr>
+</table>
+
+
+<div id = "btn"></div>
+ -->
+ 
+ 
+<ul id="sum">
+</ul>
+
+</body>
+
+<script>
+
+console.log("안녕 세상아")
+
+/* var user = "admin";
+var email = "kim@mail.com";
+var tel = "010-1234-5789";
+document.getElementById("mid").innerText=user;
+document.getElementById("memail").innerText=email;
+document.getElementById("mtel").innerText=tel;
+
+if(user == "admin") {
+	console.log("관리자 납시오")
+	var html = "<input type='button' value='삭제'>"
+	document.getElementById("btn").innerHTML=html;
+} */
+
+//응용문제 15. 다음과 같은 값을 출력하는 자바스크립트 및 html 코드를 작성하시오.
+//			구구단 2단 2*1=2 부터 2*9=18 까지 li로 출력하시오.
+			
+var a=1;
+var b=2;
+do{	
+	var sum = b * a;
+	var e="<li>" + b + "x" + a + "=" + sum + "</li>"
+	document.getElementById("sum").innerHTML+=e;
+	a++;
+}while(a < 10);
+
+</script>
+</html>

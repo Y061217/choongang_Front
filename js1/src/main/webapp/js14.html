@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+
+<title>js 6일차 - HTML5 + JS 4.0 - 체크박스를 이용한 전체 선택 응용</title>
+
+</head>
+<script>
+
+
+function a(){
+	var node = f.db.length;
+	var w = 0;
+		while(w < node){
+			f.db[w].checked = f.l.checked;
+			w++;
+			}
+}
+
+// 전체선택 후 1부터 5까지 모두 선택이 됩니다. 
+// 단, 해당 번호 중 한가지를 해제 시 자동으로 전체 선택 항목도 해제됨
+function bbb(){
+	var node = fn.nt.length;
+	var w = 0;
+		while(w < node){
+			fn.nt[w].checked = fn.all2.checked;
+			w++;
+			}
+}
+
+function aaa(){
+	var node = fn.nt.length;
+	var i;
+	for(i=0;i<node;i++){
+		if(fn.nt[i].checked == fn.all2.checked){
+			fn.all2.checked = fn.nt[i].checked;
+		} else {
+ 			fn.all2.checked = fn.nt[i].checked;
+}
+	}
+	
+}
+
+
+// function aaa(){
+// fn.all2.checked = false;
+// }
+</script>
+
+<body>
+<form name="f" id="f">
+<input type="checkbox" name="l" onclick="a()">전체 선택
+<br>
+<input type="checkbox" name="db">1번
+<input type="checkbox" name="db">2번
+<input type="checkbox" name="db">3번
+<input type="checkbox" name="db">4번
+<input type="checkbox" name="db">5번
+</form>
+<br>
+<br>
+<br>
+<form name="fn" id="fn">
+<input type="checkbox" name="all2" onclick="bbb()">전체 선택
+<br>
+<input type="checkbox" name="nt" onclick="aaa()">1번
+<input type="checkbox" name="nt" onclick="aaa()">2번
+<input type="checkbox" name="nt" onclick="aaa()">3번
+<input type="checkbox" name="nt" onclick="aaa()">4번
+<input type="checkbox" name="nt" onclick="aaa()">5번
+
+</form>
+
+</body>
+</html>

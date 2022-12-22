@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chrome=1">
+<meta name="viewpoint" content="width = device-width">
+<title>js 8일차 - 중급 : 시간 함수</title>
+<script>
+//setTimeout : 호출하는 함수 안에 시간 함수가 포함되어야 함.
+//시간함수는 무조건 전역변수를 사용해야 중첩이 되지 않고 정지 시킬 수 있음
+var time1;
+function timer1(){
+	console.log("timer1");
+	time1 = setTimeout(timer1,2000); //기존 시간 함수가 삭제되고 새로 생성됨
+}
+
+function timer1_stop(){
+	clearTimeout(time1); //setTimout 정지
+	
+	
+}
+//setInterval : 별도의 함수를 적용하여 작동할 함수를 호출하는 기능
+var time2;
+function timer2(){
+	console.log("Interval");
+	time2 = setInterval(prints,2000);// 기존 함수를 유지하며 시간함수가 반복 생성됨
+	
+}
+
+function prints(){
+	console.log("d");
+}
+
+function timer2_stop(){
+	clearInterval(time2);
+	
+}
+
+//해당 시간에 맞춰서 함수를 호출하는 시간 함수
+//setTimeout(aa,5000); //5000 = 5초
+/* var cnt = 0;
+function bb(){
+	cnt += 1
+	console.log(cnt);
+} */
+//setInterval(bb,1000);
+
+</script>
+</head>
+<body>
+
+<input type="button" value="setTime" onclick="timer1()">
+<input type="button" value="stop" onclick="timer1_stop()">
+<br>
+<input type="button" value="setInterval" onclick="timer2()">
+<input type="button" value="stop" onclick="timer2_stop()">
+
+</body>
+</html>

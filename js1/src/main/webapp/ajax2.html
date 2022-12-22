@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>Ajax 1일차 - 기초(js-json파일 및 html로 출력)</title>
+<script src="jquery.js"></script>
+<script>
+	let aris;
+	
+function ari(){
+	function umi(){
+		if(window.XMLHttpRequest){
+			return new XMLHttpRequest();	
+		}
+	}
+	
+	function jsonload(){
+		if(aris.readyState==XMLHttpRequest.DONE && aris.status==200)
+		console.log(this.response);
+		const data = JSON.parse(this.response);
+		html_load(data);
+		
+	}
+	
+	aris = umi();
+	aris.onreadystatechange = jsonload;
+	aris.open("GET","./index2.json", true);
+	aris.send();
+	
+}
+//HTML 출력함수
+function html_load(data){
+	var htmlcode = "";
+	data.forEach(function(a1,a2,a3){
+		htmlcode += "<li>"+a1+"</li>"
+	})
+	document.getElementById("sub").innerHTML = htmlcode;
+}
+
+</script>
+</head>
+<body>
+<input type="button" value="데이터로드" onclick="ari()">
+
+<ul id ="sub"></ul>
+</body>
+</html>

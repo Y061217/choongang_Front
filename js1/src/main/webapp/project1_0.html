@@ -1,0 +1,210 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>도리도리</title>
+</head>
+
+<style>
+
+.all{ /* 전체범위 */
+width:800px;
+height:1000px;
+/* background-color: yellow; */
+font-size: 14px;
+}
+
+.title{ /* 제목 */
+display:block;
+width : 800px;
+height : 60px;
+/* background-color: green; */
+font-size : 40px;
+text-align: center;
+border-bottom:1px solid gray;
+}
+
+.h60{ /* 높이 60 범위 */
+width:800px;
+height:60px;
+border-bottom:1px solid gray;
+line-height: 60px; 
+}
+
+.h90{ /* 높이 90 범위 */
+width:800px;
+height:90px;
+border-bottom:1px solid gray;
+}
+
+.none{ /* 맨밑줄 none */
+border:0;
+/* background-color: green; */
+position: relative;
+}
+
+.box1{ /* id 및 pass 박스 */
+width : 250px;
+height : 40px;
+border-radius: 5px;
+margin-top : 10px;
+}
+
+.box2{ /* 이메일 및 전화번호 박스 */
+width : 620px;
+height : 40px;
+border-radius: 5px;
+margin-top : 10px;
+}
+
+.numnone{ /* 전화번호 박스 넘버만 */
+
+}
+
+.box3{ /* 거주지역 및 현재연령 박스 */
+width : 150px;
+height : 40px;
+border-radius: 5px;
+margin-top : 10px;
+}
+
+.text{ /* 전체 타이틀 텍스트 */
+width : 180px;
+height : 60px;
+float: left;
+}
+.text1{ /* 관심분야 왼쪽 타이틀 텍스트 */
+width : 180px;
+height : 60px;
+margin-top : 25px;
+float: left;
+}
+
+.select1{ /* 관심 분야 왼쪽 범위 */
+width:310px;
+height : 90px;
+float: left;
+/* background-color: red; */
+}
+
+.select2{ /* 관심 분야 오른쪽 범위 */
+width:310px;
+height : 90px;
+float: left;
+/* background-color: skyblue; */
+}
+.list{
+list-style: none; /* li 리스트 none */
+margin-left:-40px;
+}
+
+.btn1{ /* 회원가입 버튼 */
+width:100px;
+height:40px;
+background-color: skyblue;
+border:2px solid blue;
+border-radius: 5px;
+color : white;
+position: absolute;
+top: 10px;
+left:290px;
+}
+.btn2{ /* 가입취소 버튼 */
+width:100px;
+height:40px;
+background-color: gray;
+border:2px solid black;
+border-radius: 5px;
+color : white;
+position: absolute;
+top: 10px;
+left: 410px;
+}
+    
+
+</style>
+
+<body>
+
+<!-- 전체 범위 -->
+<div class="all">
+
+<!-- 제목 -->
+<span class="title">건강보험 회원가입</span> 
+
+<!-- 아이디 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;아이디</div> <!-- 아이디 텍스트 -->
+<input type="text" class="box1" name="user_id" placeholder="아이디 입력"><!-- 박스1 -->
+</div>
+
+<!-- 패스워드 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;패스워드</div> <!-- 패스워드 텍스트 -->
+<input maxlength="10" type="password" class="box1" name="user_pw" placeholder="패스워드 입력"><!-- 박스1 -->
+</div>
+
+<!-- 이메일 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;이메일</div> <!-- 이메일 텍스트 -->
+<input type="text" class="box2" name="user_email" placeholder="이메일 입력"><!-- 박스2 -->
+</div>
+
+<!-- 전화번호 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;전화번호</div> <!-- 전화번호 텍스트 -->
+<input type="text" class="box2" name="user_tel" placeholder="전화번호 입력"><!-- 박스2 -->
+</div>
+
+<!-- 거주지역 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;거주지역</div> <!-- 전화번호 텍스트 -->
+<select class="box3">
+<option name="user_area">용인</option> <!-- 옵션1 -->
+<option name="user_area">강남</option> <!-- 옵션2 -->
+<option name="user_area">부산</option> <!-- 옵션3 -->
+</select><!-- 박스3-->
+</div>
+
+<!-- 관심 분야  -->
+<div class="h90">
+<div class="text1">&nbsp;&nbsp;관심분야<br>&nbsp;&nbsp;(한가지만 선택)</div>
+<div class="select1"><!-- 관심 분야 리스트 왼쪽 범위 -->
+<ol class="list_t1">
+<li class="list"><input type="radio" name="user_fueld">악성신생물 (각종 암)</li>
+<li class="list"><input type="radio" name="user_fueld">순환계통 질환</li>
+<li class="list"><input type="radio" name="user_fueld">호흡계통 질환</li>
+</ol>
+</div>
+
+<div class="select2"><!-- 관심 분야 리스트 오른쪽 범위 -->
+<ol class="list_t2">
+<li class="list"><input type="radio" name="user_fueld">정신 및 행동장애</li>
+<li class="list"><input type="radio" name="user_fueld">소화계통의 질환</li>
+</ol>
+</div>
+</div>
+
+<!-- 현재연령 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;현재연령</div> <!-- 전화번호 텍스트 -->
+<select class="box3">
+<option name="user_age">10대</option> <!-- 옵션1 -->
+<option name="user_age">20대</option> <!-- 옵션2 -->
+<option name="user_age">30대</option> <!-- 옵션3 -->
+</select><!-- 박스3-->
+</div>
+
+<!-- 버튼2개 -->
+<div class="h60 none">
+<input type="button" class="btn1" name="user_fueld" value="회원가입">
+<input type="button" class="btn2" name="user_fueld" value="가입취소">
+</div>
+
+
+</div>
+
+
+
+
+</body>
+</html>

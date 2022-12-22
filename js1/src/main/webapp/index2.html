@@ -1,0 +1,69 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>javascript 1일차 - 기본문법(조건문)</title>
+</head>
+
+<script>
+	var a,b,c,d,e,f;
+	a = "가";
+	b = "나";
+	c = "다";
+	d = "D";
+	e = ""; //문자형태, 값은 공백
+	f = "q"; //숫자형태, 값은 0?
+	var k; //문자,숫자 형태가 확인되지 않는 상황 (undefined)
+	
+	//변수 a,b,c,d를 선언하고 각 변수에 값을 저장함
+	
+	console.log(a+b+c+d);
+	console.log(e);
+	console.log(typeof(e));
+	console.log(f);
+	console.log(typeof(f));
+	
+	
+/*조건문 if
+*if가 시작해서 else로 끝남, == (동일하다.)
+*else if 는 if의 또 다른 조건이 있을 경우 사용합니다.
+*/
+
+if(f < 10) {
+	console.log("10 미만입니다.");
+	
+} else if(f > 9){
+	console.log("10 이상입니다.");
+	
+} else {
+	console.log("숫자가 아닌 것 같습니다.");
+	
+}
+
+//짝수 홀수 검토 장치
+if(f % 2 == 0) {
+	console.log("짝수입니다.");
+
+} else if(f % 2 == 1) {
+	console.log("홀수입니다.");
+	
+} else {
+	console.log("숫자가 아닌 것 같습니다.");
+	
+}
+
+
+//이메일 검토
+if (d == "d") {
+	console.log("대소문자 구분하지 않음");
+} else {
+	console.log("대소문자 구분함");
+}
+
+
+//else if() {}는 여러번 사용 될 수 있으며 다른 조건이 추가될 때마다 사용될 수 있다.
+//if와 else는 단 한번만 사용한다.
+</script>
+<body>
+
+</body>
+</html>

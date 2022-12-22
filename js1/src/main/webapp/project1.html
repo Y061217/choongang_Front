@@ -1,0 +1,131 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>도리도리</title>
+<link rel="stylesheet" type="text/css" href="./project1.css?v=2">
+<!-- link : 외부 파일을 가져올 때 사용합니다. 단, 해당 link는 이미지, css, xml 파일을 로드할 수 있습니다. -->
+<!-- js, css 소스파일은 하루가 지날 경우 더 이상 갱신하지 않습니다. ?v=1 로 갱신해주어야함. -->
+<script src="./project1.js?v=2"></script>
+<!-- script src 속성으로 외부 자바스크립트 엔진 파일을 로드할 수 있다. -->
+
+</head>
+
+<body>
+<!--  
+백엔드 유념사항
+enctype : 암호화 
+1번 유형 - application/x-www-form-urlencoded (POST, GET) 암호화
+2번 유형 - multipart/form-data 파일 첨부 기능이 있을 경우 무조건 사용 (*미 사용 시 데이터 "null" 발생)
+3번 유형 - 
+
+
+
+-->
+
+
+<form name = "f" id = "f" enctype="application/x-www-form-urlencoded">
+
+<!-- 전체 범위 -->
+<div class="all">
+
+<!-- 제목 -->
+<span class="title">건강보험 회원가입</span> 
+
+<!-- 아이디 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;아이디</div> <!-- 아이디 텍스트 -->
+<input type="text" class="box1" id="user_id" name="user_id" placeholder="아이디 입력"><!-- 박스1 -->
+<input type="button" value="중복체크" onclick="idckeck()">
+</div>
+
+<!-- 패스워드 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;패스워드</div> <!-- 패스워드 텍스트 -->
+<input maxlength="10" type="password" class="box1" name="user_pw" placeholder="패스워드 입력"><!-- 박스1 -->
+</div>
+
+<!-- 이메일 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;이메일</div> <!-- 이메일 텍스트 -->
+<input type="text" class="box2" name="user_email" placeholder="이메일 입력"><!-- 박스2 -->
+</div>
+
+<!-- 전화번호 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;전화번호</div> <!-- 전화번호 텍스트 -->
+<input type="text" class="box2" name="user_tel" placeholder="전화번호 입력"><!-- 박스2 -->
+</div>
+
+<!-- 도로명 주소 -->
+<div class="h60" style="height:90px; line-height:30px;" >
+<div class="text" style="height:100px;">&nbsp;&nbsp;주소
+</div>
+<div class="select1" style="width:620px;">
+<ol class="list_t1">
+<li class="list" >
+<input type="text" id="add_post" placeholder="우편번호" readonly="readonly">
+<input type="button" value="주소찾기" onclick="address()">
+<br>
+<input type="text" id="addr" placeholder="도로명 주소">
+<input type="text" placeholder="상세 주소">
+</li>
+</ol>
+</div>
+</div>
+
+
+
+
+<!-- 거주지역 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;거주지역</div> <!-- 전화번호 텍스트 -->
+<select class="box3">
+<option name="user_area">용인</option> <!-- 옵션1 -->
+<option name="user_area">강남</option> <!-- 옵션2 -->
+<option name="user_area">부산</option> <!-- 옵션3 -->
+</select><!-- 박스3-->
+</div>
+
+<!-- 관심 분야  -->
+<div class="h90">
+<div class="text1">&nbsp;&nbsp;관심분야<br>&nbsp;&nbsp;(한가지만 선택)</div>
+<div class="select1"><!-- 관심 분야 리스트 왼쪽 범위 -->
+<ol class="list_t1">
+<li class="list"><input type="radio" name="user_fueld">악성신생물 (각종 암)</li>
+<li class="list"><input type="radio" name="user_fueld">순환계통 질환</li>
+<li class="list"><input type="radio" name="user_fueld">호흡계통 질환</li>
+</ol>
+</div>
+
+<div class="select2"><!-- 관심 분야 리스트 오른쪽 범위 -->
+<ol class="list_t2">
+<li class="list"><input type="radio" name="user_fueld">정신 및 행동장애</li>
+<li class="list"><input type="radio" name="user_fueld">소화계통의 질환</li>
+</ol>
+</div>
+</div>
+
+<!-- 현재연령 -->
+<div class="h60">
+<div class="text">&nbsp;&nbsp;현재연령</div> <!-- 전화번호 텍스트 -->
+<select class="box3" id="user_age">
+</select><!-- 박스3-->
+</div>
+
+<!-- 버튼2개 -->
+<div class="h60 none">
+<input type="button" class="btn1" name="user_fueld" value="회원가입" onclick="ok_mb()">
+<input type="button" class="btn2" name="user_fueld" value="가입취소" onclick="cancel_mb()">
+</div>
+
+
+</div>
+</form>
+
+
+
+</body>
+<script>
+sel_age();
+</script>
+</html>

@@ -1,0 +1,134 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 1일차 - 기본문법(조건문) 응용 문제</title>
+</head>
+<script>
+
+/* 응용문제3. 다음 숫자들을 연산하여 둘 중 작은 결과값을 출력하는 조건문 코드를 작성하시오.
+*  1. 25 * 6 + 11 * 42
+*  2. 33 * 7 + 14 * 8
+*/
+
+var ans = (25 * 6 + 11 * 42) - (33 * 7 + 14 * 8)
+
+
+if (ans > 0) {
+	
+	console.log("2번이 작음");
+} else if (ans < 0){
+	console.log("1번이 작음");
+	
+} else {
+	console.log("두 값이 같음");
+	
+}
+
+console.log(ans);
+
+/* 응용문제4. 사용자별 아이디 상태를 조회하는 조건문 코드를 작성하시오.
+ * hong : vip고객 입니다.
+   kim : 휴먼고객 입니다.
+   kang : 탈퇴고객 입니다.
+   admin : 관리자 입니다.
+   나머지는 아이디는 가입되지 않은 고객 입니다.
+ */
+ 
+ var id = "admin";
+ 
+ if(id == "hong") {
+	 console.log("vip고객 입니다.");
+	 
+ } else if (id == "kim") {
+	 console.log("휴먼고객 입니다.");
+	 
+ } else if (id == "kang") {
+	 console.log("탈퇴고객 입니다.");
+	 
+ } else if (id == "admin") {
+	 console.log("관리자 입니다.");
+	 
+ } else {
+	 console.log("가입되지 않은 고객 입니다.");
+	 
+ }
+ 
+ var cp = "12345";
+ if (cp == "12345") {
+	 console.log("올바른 쿠폰번호 입니다.");
+	 
+ } else if (cp != "12345") {
+	 console.log("올바르지 않은 쿠폰번호 입니다.");
+	 
+ }
+ 
+ /* 응용문제5. 사용자가 임의의 숫자 1에서 30까지 숫자를 하나 입력합니다. 5 단위 씩 해당 숫자를 검토하는 조건문 작성하시오.
+ 	단, 출력 결과는 다음과 같습니다.
+ 	5 이하, 10 이하, 15 이하, 20 이하, 25 이상 숫자
+  * 
+  */
+  
+  var num = 22;
+ 
+ 	if(num <= 5) {
+ 		console.log("5 이하 숫자");
+ 
+ 	} else if (num <= 10 ) {
+ 		console.log("10 이하 숫자");
+ 		
+ 	} else if (num <= 15 ) {
+ 		console.log("15 이하 숫자");
+ 		
+ 	} else if (num <= 20 ) {
+ 		console.log("20 이하 숫자");
+ 		
+ 	} else if (num >= 25 ) {
+ 		console.log("25 이상 숫자");
+ 		
+ 	} else {
+ 		console.log("해당 범위의 숫자가 아닙니다.");
+ 		
+ 	}
+ 	
+ 	
+ /* 응용문제6. 임의숫자 1~120 를 입력 후 다음과 같이 출력 되도록 하십시오.
+ 	10미만 숫자 입니다.
+ 	10이상 숫자 입니다.
+ 	20이상 숫자 입니다.
+ 	50이상 숫자 입니다.
+ 	100이상 숫자 입니다.
+ 	해당 문구를 출력하는 조건문을 작성하세요.
+ */	
+ 
+ 	var num2 = 54;
+ 		if (num2 <= 0) {
+ 			console.log("범위에서 벗어났습니다.");
+ 		} 
+ 	else if (num2 < 10) {
+ 			console.log("10미만 숫자 입니다.");
+ 		} 
+ 	else if (num2 < 19) {
+ 			console.log("10이상 숫자 입니다.");
+ 		} 
+ 	else if (num2 < 49) {
+ 			console.log("20이상 숫자 입니다.");
+ 		} 
+ 	else if (num2 < 100) {
+ 			console.log("50이상 숫자 입니다.");
+ 		} 
+ 	else if (num2 < 121) {
+ 			console.log("100이상 숫자 입니다.");
+ 		} 
+ 	else if (num2 > 120) {
+ 			console.log("범위에서 벗어났습니다.");
+ 		} 
+ 		else {
+ 			console.log("숫자가 아닙니다.");
+ 		}
+ 		
+ 	//컴퓨터 프로그래밍은 위에서부터 읽으며 내려오기 때문에 이 성질을 잘 알고 있어야 한다.
+</script>
+<body>
+
+</body>
+</html>

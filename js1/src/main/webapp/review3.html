@@ -1,0 +1,104 @@
+<html lang = "ko">
+<head>
+<meta charset="UTF-8">
+<title>js 4일차 복습 3 - 기초 문법 및 함수 활용 (주소 찾기)</title>
+</head>
+
+<script>
+
+
+function wdw(){
+	window.open("./address.html", "","width=500 height=220")
+}
+</script>
+
+<style>
+
+
+.ulcss{
+	width : 500px;
+	height: 125px;
+	list-style : none;
+
+	margin : 0;
+	padding : 0;
+}
+
+li {
+	font-size : 13px;
+	margin : 0 0px 10px 0;
+}
+
+.a {
+	width : 260px;
+	height: 35px;
+
+
+
+}
+
+.b {
+	width : 500px;
+	height : 35px;
+
+	padding : 0;
+}
+
+.bx2 {
+	width : 500px;
+	height : 35px;
+	border : 1px solid blue;
+	padding : 0;
+}
+
+.loc {
+	width : 100px;
+	height : 35px;
+	background-color : black;
+	color : white;
+	border : none;
+	vertical-align: -1px;
+	padding : 0;
+
+}
+
+.num {
+	width : 150px;
+	height : 35px;
+	margin-right : 5px;
+	border : 1px solid blue;
+	padding : 0;
+}
+
+.no {
+	margin-bottom : 0;
+}
+
+.ro {
+	width:500px;
+	height: 125px;
+	margin: 0 auto;
+}
+</style>
+
+<body>
+
+<div class="ro">
+<ul class="ulcss">
+	<li class="li a">
+	<input type = "text" class="num" readonly="readonly" placeholder="우편번호" maxlength="5">
+	<input type = "button" value = "주소 검색" class="loc" onclick="wdw()">
+	</li>
+	<li class="li b">
+	<input type = "text" class="bx2" placeholder="도로명 주소를 검색하세요">
+	</li>
+	<li class="li b">
+	<input type = "text" class="bx2 no" placeholder="상세 주소를 입력하세요">
+	</li>
+</ul>
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js2일차 - HTML 연동</title>
+</head>
+
+<style>
+
+
+</style>
+
+<body>
+
+<div id = "box">박스</div>
+<div id = "sbox"></div>
+<br>
+<br>
+<div id = "mid"></div>님 환영합니다.
+
+<br>
+
+오늘 날짜는 <span id = date></span> 입니다.
+
+
+</body>
+
+<script>
+var date = 20221207;
+document.getElementById("box").innerText="홍길동";
+document.getElementById("sbox").innerHTML="<input type = 'button' value ='sss'>"
+document.getElementById("mid").innerText="강감찬";
+//document : 현재 페이지를 말합니다.
+//getEIementById:현재 페이지에서 해당 id를 가져옵니다.
+//innerText : 문자 또는 숫자, 변수를 출력(호출)합니다. 기존에 내용이 있었다면 지워집니다.
+//innerHTML : HTML 코드를 출력할 때 사용합니다. 이때 쌍따옴표, 외따옴표를 구분해서 사용해야합니다.
+document.getElementById("date").innerText=date;
+
+
+
+</script>
+
+
+</html>

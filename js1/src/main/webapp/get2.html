@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>js9일차 - get방식 전송 응용 예시</title>
+</head>
+
+
+<body>
+연락처 : <span id="telno"></span><br>
+주소 :  <span id="address"></span><br>
+</body>
+
+<script>
+	var data = [
+	["홍길동", "서울시 영등포구 여의도동 23-1", "01012344567" ,"hong@nate.com"],
+	["박찬호", "서울시 강남구 테헤란로 7길 7", "01012349874" ,"park@nate.com"]
+	]
+
+	var uri = window.location.search;
+	//console.log(uri);
+	if(uri==""){
+		alert("올바른 접근 방법이 아닙니다.");
+		history.go(-1);
+		
+	}
+
+	var telno = uri.split("?tel=");
+	var ori_data = telno[1];
+	var a;
+	var count=0;
+	for(a in data){
+		if(data[a][2] == ori_data){
+			//console.log("일치");
+			document.getElementById("telno").innerText=data[a][2];
+			document.getElementById("address").innerText=data[a][1];
+			count++;
+		};
+	}
+		
+	if(count==0){
+			alert("해당 데이터를 찾지 못 했습니다.");
+			history.go(-1);
+		}
+	
+</script>
+</html>

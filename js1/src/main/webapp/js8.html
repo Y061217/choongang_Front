@@ -1,0 +1,59 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js3일차 - 이벤트 함수 + 연산 처리</title>
+</head>
+
+
+<script>
+
+
+function cal(){
+	var f = document.getElementById("f");
+	var b = document.getElementById("b");
+	var sum = Number(f.value) + Number(b.value); //HTML은 모든 사용자 값은 문자열 자료형임
+	console.log(sum);
+}
+
+
+function gg(){
+	var gg = document.getElementById("user").value;
+	var k=1;
+	var kgg;
+	console.log(gg + "단 입니다.");
+
+	while(k < 10){
+		kgg = Number(gg) * k;
+		console.log(gg + "*" + k + "=" + kgg);
+		k++;
+	}
+		
+}
+
+
+</script>
+
+
+
+<body>
+
+첫번째 값<input type = "text" id = f>
+두번째 값<input type = "text" id = b>
+<input type = "button" value = "cal" onclick="cal()">
+<!-- 연산 처리 시 HTML은 모든 사용자 값은 문자열 자료형임. -->
+
+<br>
+<br>
+<br>
+
+<!-- 응용문제 4. 사용자가 한가지의 숫자값을 입력합니다. 
+해당 숫자 값을 이용하여 구구단을 출력하시오.
+예시 : 3 => 3단 출력 -->
+
+<input type = "text" id = "user"  maxlength="1">
+<input type = "button" value = "결과 보기" onclick = "gg()">
+
+
+
+</body>
+</html>

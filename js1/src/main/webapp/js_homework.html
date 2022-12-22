@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+
+<script>
+
+//숙제1. 50~100 짝수를 제외한 홀수값 총 출력 + 총 갯수?
+		
+	var a=50;
+	var c=0;
+	var b = 0;
+	while (a < 101){
+		
+    if(a % 2 != 0){
+        console.log(a);
+        b += a;
+        c++;}
+    else {}
+    a++;
+}
+console.log("홀수의 갯수 : "+c);
+console.log("홀수의 총합 : "+b);
+		
+		
+		
+/* 숙제2. 출력 값
+1*9=9
+2*8=16
+   .
+   .
+9*1=9
+ */
+ 
+ var a;
+ for(a=1;a<10;a++){
+     console.log(a + "*" + (10-a) + "=" + (a*(10-a)))
+ }
+ 
+ 
+</script>
+<body>
+
+
+</body>
+</html>

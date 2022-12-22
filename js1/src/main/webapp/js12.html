@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+
+<title>js 6일차 - HTML5 + JS 4.0 - form(name 값 사용법) </title>
+
+
+</head>
+<script>
+function abc(){
+	console.log(f.ck.checked);
+	if(f.mid.value==""){
+		alert("아이디를 입력하세요.");
+	}
+	else if(f.pass.value==""){
+		alert("패스워드를 입력하세요.")
+	}
+	else {
+		f.method="post";
+// 		f.action="http://naver.com";
+		f.submit();
+	}
+}
+//name값을 정확하게 알고 있을 경우, form과 object의 name 값으로 해당 값을 비교 또는 확인할수 있다.
+</script>
+
+
+<body>
+<form name="f" id="f">
+<input type="text" name="mid" id="mid1"><br>
+<input type="password" name="pass" id="mpass1"><br>
+<input type="checkbox" name="ck">보안코드 체크
+<input type="button" value="로그인" onclick="abc()">
+</form>
+
+
+
+
+
+</body>
+</html>

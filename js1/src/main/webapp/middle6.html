@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>js8일차 중급 - 1차 key 배열 - forin 반복문</title>
+</head>
+<script>
+//key 배열이란 해당 배열값에 가상에 key 이름을 포함하여 보다 쉽게 배열값을 분리하여 데이터를 제어,파악함
+//user : 키 이름
+
+var data = {"user" : ["홍","이","박","김"]}
+console.log(data.user[0]); // user 키 의 배열에서 첫번째 데이터
+console.log(data["user"][0]); // user 키 의 배열에서 첫번째 데이터
+var ea = data.user.length;//user 키의 배열 갯수
+var ea2 = data["user"].length;//user 키의 배열 갯수
+console.log(ea);
+
+var w=0;
+while(w < ea) {
+	console.log(data["user"][w]);
+	w++;
+}
+
+var data2 = {
+		"user" : ["Owner","Faker","Zeus","gumausi","keria" , ""] 
+		, 
+		"email" : ["bob@mail.com" , "mac@mail.com" , "King@mail.com" , "jax@mail.com" , "john@mail.com"]
+		,
+		"age" : [20 , 24 , 23 , 21 , 18]
+}
+		/* 
+	console.log(data2);
+	console.log(data2["user"][4]);
+	console.log(data2["email"][4]);
+	console.log(Object.keys(data2)); //키 값만 출력 */
+var data2_user_ea = data2["user"].length;
+var r=0;
+while(r < data2_user_ea){
+	console.log("아이디 : " + data2["user"][r] + " 이메일 : " + data2["email"][r]);
+	r++;
+}
+	console.log(data2_user_ea);
+	
+//배열 전용 반복문 js4.0에서 등장
+/* var v;
+for ( v in data2) { // 키변수 in key 배열명)
+	console.log(v);//키값 출력
+	var k = 0;
+	do{
+		console.log(data2[v][k]);
+		k++;
+	} while(k < data2_user_ea);
+	
+} */
+
+// 더블 for in
+
+//키가 있는 배열
+/* var h,x; //큰 포인문, 작은 포인문에 사용하는 변수 선언
+for ( h in data2) { 
+	console.log(h); //큰 포인문 : 키 데이터 값 출력
+	for ( x in data2[h]) {
+		console.log(data2[h][x]); //작은 포인문 : 배열 데이터 값 출력
+		
+	}
+}
+ */
+	
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>jq3일차 - FAQ 만들기</title>
+<script src="jquery.js"></script>
+
+<style>
+.ulcss {
+	list-style: none;
+	margin : 0;
+	padding : 0;
+	width : 1000px;
+	height: auto;
+	}
+	
+.ulcss > li {
+	width : inherit;
+	height: auto;
+	
+}
+
+.ulcss > li:nth-child(even){
+	background-color: #e4e724;
+}
+
+.ulcss > li > .q {
+	cursor : pointer;
+	width : inherit;
+	height: 30px;
+	border-bottom: 1px dashed #000;
+
+}
+
+.ulcss > li > .a {
+	width : inherit;
+	height: 150px;
+	background-color: #afe1ff;
+	font-size: 13px;
+	display: none;
+}
+
+span {
+	display: block;
+	}
+
+.s1 {
+	width : 100%;
+	height : 30px;
+	line-height: 30px;
+	font-size: 13px
+}
+</style>
+</head>
+<body>
+<p>자주 묻는 질문(FAQ)</p>
+<ul class="ulcss" id="ulcss">
+	<li>
+		<div class="q">
+			<span class="s1">Q.[결제오류] 신용카드 결제 오류</span>	
+		</div>
+		<div class="a">
+			<span class="s2">A.신용카드 정보가 올바르지 않을 경우 다음과 같습니다.</span>
+		</div>
+	</li>
+	
+	<li>
+		<div class="q">
+			<span class="s1">Q.[결제오류] 신용카드 결제 오류</span>
+		</div>
+		<div class="a">
+			<span class="s2">A.신용카드 정보가 올바르지 않을 경우 다음과 같습니다.</span>
+		</div>
+	</li>
+	
+
+	<li>
+		<div class="q">
+			<span class="s1">Q.[결제오류] 신용카드 결제 오류</span>
+		</div>
+		<div class="a">
+			<span class="s2">A.신용카드 정보가 올바르지 않을 경우 다음과 같습니다.</span>
+		</div>
+	</li>
+	
+	<li>
+		<div class="q">
+			<span class="s1">Q.[결제오류] 신용카드 결제 오류</span>
+		</div>
+		<div class="a">
+			<span class="s2">A.신용카드 정보가 올바르지 않을 경우 다음과 같습니다.</span>
+		</div>
+	</li>
+	
+	
+	<li>
+		<div class="q">
+			<span class="s1">Q.[결제오류] 신용카드 결제 오류</span>
+		</div>
+		<div class="a">
+			<span class="s2">A.신용카드 정보가 올바르지 않을 경우 다음과 같습니다.</span>
+		</div>
+	</li>
+
+</ul>
+</body>
+<script>
+$(function(){
+	let $no = "";
+	$("#ulcss > li").click(function(){
+		var $node = $(this).index();
+		var $ea = $(".a").length;
+		console.log($node);
+		var $no = $node;
+		$("#ulcss > li:eq("+$node+") > .a").slideDown();
+// 		var $w=0;
+// 		while($w < $ea){
+// 			$("#ulcss > li:eq("+$w+") > .a").slideUp();
+// 			$w++;
+// 		}
+		//console.log($node);
+
+	});
+	console.log($no);
+})
+</script>
+</html>

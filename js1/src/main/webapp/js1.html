@@ -1,0 +1,65 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js3일차 - 함수(Function)</title>
+</head>
+
+<script>
+function unname(){ //unname함수 , 동일한 이름의 함수는 가장 마지막에 작성된 코드로 실행
+	var f;
+	for(f=1;f<6;f++){
+		console.log(f);
+	}
+}
+
+//unname(); //unname함수 실행
+
+
+function model(){
+	console.log("홍길동");
+}
+
+function model2(a,b){ //인수값  a = 입력값 , : 추가 인수 요구
+	console.log(a); // a 출력
+	console.log(b); // b 출력
+}
+
+
+/* model2("a");
+model2(1234,4321); */
+
+/* -----------------------------여기까지 일반 함수---------------------------------- */
+
+//확장 함수
+function model_c(a,b,c){ //2. model_c라는 함수에 인자값을 받은 후 코드 실행 
+	
+	if(c == "반복") { //3. 해당 인자값 중 c 인자값을 조건문으로 검토
+		model_e(a,b,c);	//4. 조건문을 만족할 경우 a b c 라는 인자값 3개 호출
+		}
+	else{model_d(a,b); //4. 조건문을 만족하지 못할 경우 a b 라는 인자값 2개 호출
+	}
+	
+}
+
+model_c(10,20); //1. model_c 라는 함수에 3개의 인자값을 적용 후 호출
+
+function model_d(a,b){ //5. model_d 라는 확장함수 코드 실행
+	var sum = a + b;
+	console.log(sum); //6. 결과값 출력
+}
+
+function model_e(a,b,c){  //5. model_e 라는 확장함수 코드 실행
+	while(a <= b){ //6. 반복문의 시작값과 종료값을 인자값으로 적용
+		console.log(a); //7. 결과값 출력
+		a++;
+	}
+}
+
+
+
+</script>
+
+<body>
+
+</body>
+</html>

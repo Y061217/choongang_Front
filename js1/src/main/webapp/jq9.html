@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>Jquery 2일차 - hidden 속성 사용하기</title>
+</head>
+<script src="./jquery.js"></script>
+<script>
+$(function(){
+	$("#box").click(function(){
+		$(this).hide(600);
+	});
+	$("#btn").click(function(){
+		$("#box").show(600);
+	});
+	$("#banner").click(function(){
+		$(this).slideUp(600);
+	});
+	$("#btn2").click(function(){
+		$("#banner").slideDown(600);
+	});
+	
+})
+</script>
+
+<style>
+.box {
+width:100px;
+height:100px;
+background-color: #afe1ff;
+}
+.banner{
+	width : 1200px;
+	height : 150px;
+	background-color: #e4e724;
+}
+</style>
+<body>
+<div class="box" id="box"></div>
+<input type="button" value="클릭" id="btn">
+<div class="banner" id="banner"></div>
+<input type="button" value="클릭2" id="btn2">
+</body>
+</html>

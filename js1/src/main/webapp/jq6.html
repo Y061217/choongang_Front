@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>Jquery 2일차 - hidden 속성 사용하기</title>
+
+</head>
+<script src="./jquery.js"></script>
+<script>
+$(function(){
+	$("#btn").click(function(){
+		$("#f").submit();
+	});
+	
+})
+
+function btnn(){
+	f.submit();
+}
+</script>
+
+<body>
+<form name="f" id="f" method="get" action="./jq7.html">
+<input type="hidden" name="mid" id ="mid" value="hong">
+<input type="hidden" name="money" id ="money" value="25000">
+<input type="radio" id="a1" name="a" value="y">동의함
+<input type="radio" id="a2" name="a" value="n">동의 안함
+<input type="button" id="btn" value="j쿼리식 클릭">
+<input type="button" value="자바식 클릭" onclick="btnn()">
+</form>
+</body>
+</html>

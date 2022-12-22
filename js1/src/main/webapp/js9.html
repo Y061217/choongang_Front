@@ -1,0 +1,82 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js3일차 - 이벤트 함수 및 연산처리 응용</title>
+</head>
+
+<script>
+
+function cal1(){
+	var user = document.getElementById("user").value;
+	var num = Number(user);
+	var sum = 0;
+	
+	if(num <= 0 || num > 100) {
+		console.log("해당 숫자 범위가 초과 되었습니다.");
+	} else {
+		var k = 1;
+		do{
+			sum += k;
+			k++;
+		}while(k <= num);
+	console.log(sum);
+	}
+		
+}
+
+function gg(){
+	var v1 = document.getElementById("v1").value;
+	var v2 = document.getElementById("v2").value;
+	var vv1 = Number(v1);
+	var vv2 = Number(v2);
+	var j;
+	var total;
+	if(vv1 == "" || vv2 == ""){console.log("값을 입력하세요")}
+	else{
+	for(vv1;vv1<=vv2;vv1++){
+		for(j=1;j<10;j++){
+			total = vv1 * j;
+			console.log(vv1 + "*" + j + "=" + total);
+		}
+	}
+	}
+}
+
+</script>
+
+
+<style>
+p {
+	width : 700px;
+}
+</style>
+<body>
+<p>
+응용문제 5. 
+<br>
+사용자가 숫자 1 ~ 100까지 숫자를 입력합니다. <br>단, 0과 100이상 숫자를 입력 시,
+"해당 숫자 범위가 초과 되었습니다" 콘솔메세지를 출력합니다. <br>그 외의 정상적인 숫자 입력 시
+해당 숫자 만큼 모두 더한 결과값을 출력하시오.
+</p>
+<br>
+
+
+<input type = "text" id = "user">
+<input type = "button" onclick="cal1()" value = "결과보기">
+
+<br><br><br>
+
+<p>
+응용문제 6. 
+<br>
+사용자가 두 개 값을 입력합니다. &nbsp;해당 범위 만큼 구구단이 출력 되도록 제작하세오.
+	<br>예시 : 사용자가 첫번째값 : 5 사용자가 두번째 값 : 8
+		<br>5*1=5 ~ 8*9=72까지 결과값과 함께 콘솔 출력
+</p>
+	<br><br>
+<input type = "text" id = "v1" placeholder="첫번째 숫자">
+<input type = "text" id = "v2" placeholder="두번째 숫자">
+<input type = "button" onclick="gg()" value = "결과보기">
+
+</body>
+</html>

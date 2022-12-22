@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>js9일차 - get방식 전송</title>
+</head>
+<script defer>
+function abc(){
+	f.submit();
+	}
+function bbb(){
+	var userid="hong";
+	var passwd="aa1122";
+	var email="hong@nate.com";
+	
+	location.href="./middle13.html?mid=" + userid + "&email=" + passwd + "&tel="+email;
+}
+</script>
+<body>
+<form name="f" id="f" method="get" action="./middle13.html" enctype="application/x-www-form-urlencoded">
+<input type="text" name="mid">
+<input type="text" name="email">
+<input type="text" name="tel">
+<input type="button" value="전송" onclick="abc()">
+</form>
+<input type="button" value="전송2" onclick="bbb()">
+
+</body>
+</html>

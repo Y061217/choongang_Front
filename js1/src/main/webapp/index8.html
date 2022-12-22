@@ -1,0 +1,39 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 1일차 - 응용 문제 (반복문)</title>
+</head>
+
+<script>
+//응용문제
+//1. 해당 2~15까지의 숫자를 모두 곱하여 합산 결과 값이 홀수 인지 짝수 인지를 출력하시오.
+
+var a,b,c,d;
+	b=1;
+	
+for(a=2;a<16;a++){
+	b *= a;
+}
+if(b % 2 == 0){
+	console.log(b + " : 짝수입니다.");
+} else {
+	console.log(b + " : 홀수입니다.");
+}
+
+//2. 5+1~5+9 ... 부터 8+9까지의 결과값을 더한 최종 결과값을 출력하시오.
+
+	d=0;
+for(a=5;a<9;a++){
+	for(b=1;b<10;b++){
+		c = a + b;
+		d += c;
+	}
+		
+}
+console.log(d);
+</script>
+
+<body>
+
+</body>
+</html>

@@ -1,0 +1,228 @@
+
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 4일차 복습 5 - 기초 문법 및 함수 활용 (결제수단 선택)</title>
+</head>
+
+<style>
+body {
+	margin:0;
+	padding :0;
+}
+.ro {
+width : 800px;
+height : 120px;
+margin: 0 auto;
+text-align : center;
+font-size : 13px;
+}
+
+.ulc {
+	width : 800px;
+	height : 35px;
+	list-style : none;
+	margin : 0 auto;
+	padding : 0;
+
+}
+
+.li {
+	width : 162.5px;
+	height : 35px;
+	float : left;
+	line-height : 35px;
+
+}
+
+.h {
+	width : 150px;
+
+}
+
+.mid {
+	width : 800px;
+	height : 50px;
+	margin : 0 auto;
+	line-height : 50px;
+}
+
+.lst{
+	width : 800px;
+	height : 35px;
+	margin : 0 auto;
+
+}
+
+.lst_bx{
+	width : 200px;
+	height : 35px;
+	background-color : black;
+	border : none;
+	color : white;
+	padding : 0;
+}
+
+
+
+
+.pay {
+	width:800px;
+	height:120px;
+	margin:0 auto;
+	font-size : 13px;
+}
+
+.ulcss {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 800px;
+	height: 120px;
+	background-color: #afe1ff;
+}
+
+.licss{
+	width:800px;
+	height: 35px;
+}
+.licss2{
+	width:800px;
+	height: 50px;
+	text-align : center;
+	line-height : 50px;
+}
+
+.divleft{
+	width : 150px;
+	height : 35px;
+	float:left;
+	line-height : 35px;
+	text-align : center;
+}
+
+.divright{
+	width : 650px;
+	height : 35px;
+	background-color: #afe1ff;
+	float:left;
+	line-height : 35px;
+	text-align : center;
+}
+.spancss{
+	display:block;
+	width : 162.5px;
+	height : 35px;
+	float:left;
+}
+
+.btn {
+	width : 100px;
+	height : 35px;
+	background-color: black;
+	color : white;
+	line-height : 35px;
+	text-align : center;
+	border: none;
+}
+
+.aligns {
+	text-align : center;
+}
+</style>
+
+
+<script>
+
+function payto(){
+	var chk1 = document.getElementById("chk1");
+	if(chk1.checked == true){
+		paypart();
+	} else {
+		alert("해당 체크박스에 동의하셔야 결제가 진행됩니다.");
+		
+		
+	}
+	
+	
+}
+//결제수단에 맞는 페이지 출력
+function paypart(){
+	var p = ""; //어떤것이 선택되었는 지 저장되는 변수 값
+	var f;
+	for(f=1;f<=4;f++){
+		var z = document.getElementById("pay"+f).checked;
+		if(z==true){
+			p = f;
+		}
+	}
+	
+	switch(p){
+	case 1 : alert("신용카드");
+		break;
+	case 2 : alert("계좌이체");
+		break;
+	case 3 : alert("휴대폰 결제");
+		break;
+	case 4 : alert("상품권 결제");
+		break;
+	
+	}
+
+}
+
+</script>
+
+
+<body>
+
+
+<div class="ro">
+	<ul class="ulc">
+		<li class="li h">결제수단 선택</li>
+		<li class="li rdo"><input type = "radio" id="pay1" name = "t" checked="checked">신용카드</li>
+		<li class="li rdo"><input type = "radio" id="pay2" name = "t">계좌이체</li>
+		<li class="li rdo"><input type = "radio" id="pay3" name = "t">휴대폰 결제</li>
+		<li class="li rdo"><input type = "radio" id="pay4" name = "t">상품권 결제</li>
+	</ul>
+	<div class="mid">
+	<input type="checkbox" id="chk1">위 결제 금액으로 결제 하시겠습니까?
+	</div>
+	<div class="lst">
+	<input type = "button" class = "lst_bx" value = "결제하기" onclick="payto()">
+	</div>
+</div>
+
+
+<br>
+<br>
+<br>
+<br>
+<!-- 레이 아웃 시작 -->
+<div class="pay">
+<!-- 결제수단 view -->
+<ul class="ulcss">
+<!-- 결제수단 -->
+	<li class="licss">
+		<div class="divleft">결제수단 선택</div>
+		<div class="divright">
+			<span class="spancss"><input type = "radio" name = "p" checked="checked">신용카드</span>
+			<span class="spancss"><input type = "radio" name = "p">계좌이체</span>
+			<span class="spancss"><input type = "radio" name = "p">휴대폰 결제</span>
+			<span class="spancss"><input type = "radio" name = "p">상품권 결제</span>
+		</div>
+	</li>
+<!-- checkbox -->
+	<li class="licss2">
+		<input type = "checkbox">위 결제 금액으로 결제 하시겠습니까?
+	</li>
+<!-- 결제하기 버튼 -->
+	<li class="licss aligns">
+		<input type = "button" class = "btn" value = "결제하기">
+	</li>
+</ul>
+
+</div>
+
+</body>
+</html>

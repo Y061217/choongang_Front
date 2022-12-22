@@ -1,0 +1,90 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 4일차 복습 1 - 기초 문법 및 함수 활용</title>
+</head>
+
+<script>
+function search_ck(){
+	var a = document.getElementById("search").value;
+	if(a == ""){
+		alert("상품명을 입력하셔야 합니다.");
+	} else {
+		location.href = "http://naver.com";
+	}
+}
+</script>
+
+<style>
+
+.ulcss {
+	width : 490px; 
+	height : 30px;
+	list-style : none;
+	margin : 0 auto;
+	padding : 0;
+	line-height : 30px;
+	font-size : 13px;
+
+}
+
+.licss {
+	height : 30px;
+	float : left;
+		padding : 0;
+
+}
+
+.li1 {
+	width : 80px;
+	height : 30px;
+	padding : 0;
+	margin : 0;
+	font-size : 13px;
+
+}
+
+.li2 {
+	width : 410px;
+	height : 30px;
+	padding : 0;
+
+}
+
+.search {
+	margin-right : 5px;
+	width : 300px;
+	height : 30px;
+	border : 1px solid black;
+	padding : 0;
+
+}
+
+.btn {
+	width : 100px;
+	height : 30px;
+	background-color : black;
+	color : white;
+	border : 0;
+	padding : 0;
+	vertical-align:-2px;
+
+}
+</style>
+
+<body>
+<!-- input 과 button 함께 사용 시 무조건 5px 여백이 적용됨 -->
+<ul class="ulcss">
+	<li class="licss li1">상품 검색 </li>
+	<li class="licss li2">
+	<input type = "text" id = "search" placeholder ="상품명을 입력하세요" class="search">
+	<input type = "button" value = "검색" class="btn" onclick="search_ck()">
+	</li>
+	
+</ul>
+
+
+</body>
+
+
+</html>

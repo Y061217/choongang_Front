@@ -1,0 +1,37 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js2일차 - HTML 연동 2</title>
+</head>
+
+<style>
+body {
+	margin : 0;
+	padding : 0;
+}
+
+</style>
+
+<body>
+
+<ul id = data>  <!-- 해당 태그에 자바스크립트로 li태그 및 값을 출력하는 공간 -->
+</ul>
+
+
+</body>
+
+<script>
+var a = 1;
+
+while(a < 11){
+	var html = "<li>"+a+"</li>";
+	
+	a++;
+	
+	document.getElementById("data").innerHTML+=html; 
+	//1에서 10까지 반복하면서 값을 출력함 +=를 제하면 가장 마지막 데이터만 남음
+}
+
+
+</script>
+</html>

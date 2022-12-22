@@ -1,0 +1,65 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js3일차 - 기초함수</title>
+</head>
+
+<script>
+//내장함수, 외장함수
+//내장함수 : 브라우저 내부에 이미 코드가 작성되어 있는 코드
+//외장함수 : 실행할 코드를 작성해야 하는 코드
+//prompt : 사용자가 값을 입력하여 해당 정보를 확인하는 함수 항상 변수를 선언한 뒤 사용.
+//alert : 경고 메세지 창
+//location.href : url로 강제 페이지 이동
+
+
+/* var a = prompt("보안접속 코드를 입력하세요");
+console.log(a);
+if(a=="a1234"){
+	alert("접속 확인");
+}
+else{
+	location.href='http://naver.com';
+}
+ */
+/*
+//confirm : 선택을 할 수 있는 경고 메세지 창 확인을 클릭하면 if문 작동하며 else if는 쓸 수 없음
+if(confirm("해당 데이터를 정말 삭제하시겠습니까?")){
+	console.log("확인을 누름");
+	
+} else {
+	console.log("취소를 누름");
+}
+*/
+//Number : 문자열 자료형을 숫자형 자료형으로 변환하는 자료형 함수 단, "1a" 해당 형태는 변환 불가능
+//NaN : Not a Number 숫자가 아님 
+//String : 숫자형 자료형을 문자열 자료형으로 변환하는 자료형 함수
+//window.open("로드할 페이지","활성화 시 팝업창, 비활성화 시 새 탭","팝업창 사이즈" 
+//				신규 페이지를 해당 사이즈에 맞춰서 팝업창으로 생성
+//
+
+var aa = Number("10");
+var bb = Number("5");
+var cc = aa + bb;
+
+console.log(cc);
+
+a = String(aa);
+b = String(bb);
+var c = a * b ;
+
+console.log(c);
+
+
+window.open("./js2.html","","width=400 height=400");
+</script>
+
+
+<body>
+
+접속 완료!
+
+
+
+</body>
+</html>

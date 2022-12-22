@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>js 6일차 - HTML5 그 외의 태그</title>
+</head>
+<style>
+.bx {
+	display:block;
+	width: 100px;
+	height: 100px;
+	background-color: #afe1ff;
+	color : #fff;
+	}
+	
+.menu{
+	width:180px;
+	height : 30px;
+	line-height : 30px;
+	background-color: #afe1ff;
+	border-radius : 30px;
+	font-size : 12px;
+	color : #fff;
+}
+.ulcss{
+	list-style : none;
+
+}
+</style>
+
+<body>
+<input type="checkbox" id="o"><label for="o">아이디 기억하기</label>
+<label class="bx">Sphinx</label>
+<label><input type="checkbox" id="b">자동 로그인</label>
+<br>
+<br>
+<br>
+<!-- datalist : 검색 시 검색 키워드를 자동 입력 시키는 태그입니다. 단독사용 불가
+	select 태그의 업그레이드 버전입니다.
+ -->
+<input type="text" id="c" list="search">
+<datalist id="search">
+<option>잡아</option>
+<option>에이치티엠엘</option>
+<option>씨에스아이</option>
+<option>스크립트</option>
+</datalist>
+<br><br>
+
+<details>
+<summary class="menu">
+고혹적인 매혹 티셔츠
+</summary>
+<ul class="ulcss">
+	<li>S</li>
+	<li>M</li>
+	<li>L</li>
+	<li>XL</li>
+	<li>XXL</li>
+	<li>XXXL</li>
+</ul>
+</details>
+<!-- details : 세부 정보를 표시할 때 사용하는 시멘틱 태그입니다. 
+	 summary : 타이틀 정보 -->
+
+</body>
+
+
+</html>

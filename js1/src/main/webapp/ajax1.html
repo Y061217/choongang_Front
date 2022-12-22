@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>Ajax 1일차 - 기초(js)</title>
+<script src="jquery.js"></script>
+
+<script>
+/*
+ * Ajax : 비동기(async), 동기(sync) + js,jq를 말합니다. 완전한 통신언어
+   비동기 통신 : Ajax 단독 사용
+   동기 통신 : Ajax + Node.js
+   동기화 : 순서대로 프로세서가 진행 됨
+   동기화 단점 : 느림
+   비동기화 : 실시간 통신
+   비동기화 단점 : 버그 발생 시 확인되지 않음
+ */
+let datas; //Ajax를 통하여 외부 데이터를 가져오는 변수
+
+function ajax(){
+	function ari(){
+		if(window.XMLHttpRequest){
+			return new XMLHttpRequest();
+		}
+	}
+	function fileopen(){
+		if(datas.readyState==XMLHttpRequest.DONE && datas.status==200){
+			console.log(this.response);
+		}
+	}
+	
+	datas = ari(); //통신을 위한 연결 상태 확인
+	// 해당 파일을 로드 시 올바른 경로 및 상태를 확인하는 부분
+	datas.onreadystatechange = fileopen; 
+	//로드할 파일명 지정 및 GET(파일 가져옴, 파라미터로 값을 전송),POST
+	datas.open("GET","./index2.json?v=1",true);
+	//해당 파일 
+	datas.send();
+}
+</script>
+</head>
+<body>
+<input type="button" value="통신" onclick="ajax()">
+</body>
+</html>

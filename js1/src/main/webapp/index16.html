@@ -1,0 +1,63 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 2일차 - 반복문 응용문제(카운팅)</title>
+</head>
+
+<script>
+// 개념
+// var cnt=0;
+// var a=2;
+// for(a=1;a<10;a++){
+// 	if(a % 2 ==1)
+// 		{//cnt++;
+// 		   cnt += 1;
+// 		}
+// }
+
+
+//응용문제 11. 1~100 까지 중 10 단위씩 총 몇 개의 숫자가 있는 지 출력하시오.
+//		단 사용 반복문은 do while문 입니다.
+
+// var cnt=0;
+// var a=1;
+
+// do {
+// 		if(a % 10 == 0){
+// 			cnt++;
+// 		}
+// 	a++;
+// } while (a < 101);
+
+// console.log(cnt);
+
+
+//응용문제 12. 1 ~ 55 中 홀수 값이 몇개 인지 구하고, 짝수 값은 모두 곱하여 20% 감소된 숫자로 적용
+
+
+var a=1;
+var cnt=0;
+var sum = 1;
+while (a < 56) {
+	if(a % 2 != 0){
+		cnt++;
+	
+	} else if(a % 2 == 0)
+	{
+		sum *= a;
+	} else 
+	{
+		
+	}
+	
+	
+	a++;
+}
+console.log(cnt);
+console.log(sum * 0.8);
+
+</script>
+<body>
+
+</body>
+</html>

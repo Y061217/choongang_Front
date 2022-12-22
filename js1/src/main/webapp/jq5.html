@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>Jquery 2일차 - Jquery 문법 확장함수</title>
+</head>
+<script src="./jquery.js"></script>
+<script>
+$(function(){
+	$("#bnt2").click(function(){
+		var $a = 10;
+		var $b = 20;
+		$.fn.abc($a,$b);
+	})
+	//$.fn = function 의 축약어로 jq에서는 선언 후 함수명과 함께 확장함수를 사용할 수 있다.
+	$.fn.abc = function($a,$b){
+		var $c = $a + $b;
+		console.log($c);
+	}
+	
+	$.fn.cal = function($cost,$dis){
+		var $rul = $cost * (1-$dis/100);
+		console.log("홍길동님: 최종 결제 금액 :"+$cost+"-"+$dis*100+"%"+"="+$rul);
+		
+	}
+	$("#total").click(function(){
+	var $cost = 250000;
+	var $dis = 20;
+	$.fn.cal($cost,$dis);
+	})
+})
+</script>
+<body>
+
+<input type="button" id="bnt">
+<br>
+응용문제3.<br>
+jquery 확장함수를 이용하여 해당 결과값을 출력하는 코드를 작성하시오.<br>
+결과 값 : <br>
+홍길동 사용자는 결제금액이 25만원입니다.<br>
+해당 20% 포인트 적용 시 최종 결제금액을 출력하시오<br>
+콘솔에 홍길동님: 최종 결제금액 : 250000 - 20%할인 = 200000
+<br>
+
+<input type="button" value="최종결제금액" id="total">
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>jq3일차 - 배열 응용</title>
+<script src="jquery.js"></script>
+<script>
+$(function(){
+	const $members = [
+	    {"name":"홍길동","blood":"O형"},
+	    {"name":"강감찬","blood":"B형"},
+	    {"name":"이순신","blood":"O형"},
+	    {"name":"유관순","blood":"O형"},
+	    {"name":"안중근","blood":"AB형"},
+	    {"name":"김동주","blood":"A형"}
+	];
+	//console.log($members[0]["name"]);
+	//console.log($members[0]["blood"]);
+	var $cmn = "";
+	var $bld = "";
+	var $oricd = $("#here").html();
+	var $all = "";
+	$.map($members,function($a,$b){		
+		//console.log($members[$b]["name"]);
+		$cmn = "<div><span>"+$members[$b]["name"]+"</span>"
+		console.log($cmn)
+		//console.log($members[$b]["blood"]);
+		$bld = "<span>"+$members[$b]["blood"]+"</span></div>"
+		console.log($bld)
+		$all += $cmn+$bld;
+		//console.log($b); //배열의 번호
+		//console.log($a); //배열의 키값
+		})
+	
+		$("#here").html($oricd + $all);
+		
+	var $cnm2 = "";
+	$.each($members,function($a,$b){
+		//console.log($a); //배열의 키값
+		//console.log($b); //배열의 번호
+		$.map($members[$a],function($c,$d){
+			//console.log($c); //배열의 번호
+			 $cnm2 += "<span>"+$c+"</span>"
+		});
+		
+	});
+	
+	console.log($cnm2)
+	$("#here2").html($cnm2);
+})
+</script>
+<style>
+div {
+	width: 200px;
+}
+
+span {
+	display: block;
+	width: 100px;
+	height: auto;
+	border: 1px solid black;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+}
+
+section > div:nth-child(1) > span{
+	background-color: #afe1ff;
+}
+
+
+</style>
+</head>
+<body>
+<section id = "here">
+<div>
+<span>고객명</span><span>혈액형</span>
+</div>
+</section>
+
+
+<div id = "here2">
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>js 7일차 - js4.0 랜덤 함수</title>
+</head>
+
+<script>
+// Math.random : 무작위의 숫자를 PC가 직접 선정하여 하나의 값을 가져옴.
+// var a = Math.random() * 3; //0~2.9까지
+// var b = Math.ceil(Math.random()*5); //0~4 까지 ceil 소수점 올림(ceil)
+// var c = Math.floor(Math.random()*5); //0~4 floor 소수점 절삭(floor)
+// var d = Math.round(Math.random()*5); //0~4 floor 소수점 반올림(round)
+// console.log(a);
+// console.log(b);
+// console.log(c);
+// console.log(d);
+
+// var i=1;
+
+// do{
+// 	var lt = Math.ceil(Math.random()*45);
+// 	console.log(lt);
+// 	i++;
+// }while(i<6)
+
+//게임 강화 확률 셋팅하기
+// var game = Math.ceil(Math.random()*45);
+// if(game > 46){
+// 	alert("강화 성공");
+// } else {
+// 	alert("강화 실패");
+// }
+
+//아이디별로 확률 변경
+// var user = "홍길동";
+// var game2;
+
+// if(user == "이순신"){
+// 	game2 = 15;
+	
+// 	}
+// 	else {game2 = Math.ceil(Math.random()*20);
+// 		if(game2==15){
+// 			game2 = 20;	}
+// 		}
+
+// switch(game2){
+// case 1:
+// 	alert("10% 할인쿠폰");
+// 	break;
+// case 7:
+// 	alert("택배비 무료 쿠폰");
+// 	break;
+// case 11:
+// 	alert("20% 할인 쿠폰");
+// 	break;
+// case 15:
+// 	alert("1종 상품 무료 구매");
+// 	break;
+// default :
+// 	alert("꽝");
+// 	break;
+// }
+
+//사용자가 1~10까지 숫자를 1개 입력합니다. 결과 보기 버튼을 클릭하면, 사용자가 입력한 값과 같으면
+//"당첨입니다." 라고 경고 메세지가 출력되며 그 외에는 "다음 기회에..." 를 출력하시오. 
+// function rd(){
+// 	var user = document.getElementById("io").value;
+// 	var rdd = Math.ceil(Math.random()*10);
+
+// 	if(Math.floor(Number(user)) == rdd){
+// 		alert("당첨입니다.");
+// 	} else if(Math.floor(Number(user)) <= 0 || Math.floor(Number(user)) > 10 || isNaN(Number(user)) == true){
+// 		alert("1~10까지 입력하세요");}
+// 	else{
+// 		alert("다음 기회에...");
+// 	}
+// }	
+</script>
+<body>
+1~10까지 숫자 중 하나를 입력하세요<br>
+<input type="text" id="io" maxlength="2"><input type="button" value ="결과 보기" onclick="rd()">
+</body>
+</html>

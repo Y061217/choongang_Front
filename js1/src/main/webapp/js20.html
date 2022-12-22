@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>js 7일차 카피라이터 신규 코드 및 스크립트 - 외부 API 1</title>
+</head>
+<script>
+function bs_cfm(no){
+	window.open("http://www.ftc.go.kr/bizCommPop.do?wrkr_no="+no,"","width=300 height=300");
+}
+
+function url_move(url){
+	if(url != ""){
+	location.href= url;
+	}
+}
+
+function emails(e){
+	if(e=="my"){
+		document.getElementById("email2").readOnly=false;
+	}
+	else{
+		document.getElementById("email2").value=e;
+	}
+}
+
+</script>
+<body>
+<!-- a태그의 tel 속성이 추가되어 스마트폰디바이스에서 자동으로 전화 송신 -->
+고객센터 대표번호 : <a href="tel:1588-1588">1588-1588</a>
+<br>
+사업자 등록증 : 220-95-00629<span onclick="bs_cfm('2209500629')">[사업자 확인]</span>
+
+<br>
+<!-- onchange 란 해당 옵션 중 하나를 선택했을 경우 자바스크립트 실행 -->
+협력사이트
+<select onchange="url_move(this.value)">
+<option value="">협력사이트</option>
+<option value="http://google.com">google</option>
+<option value="http://youtube.com">youtube</option>
+<option value="http://neflix.com">neflix</option>
+</select>
+<br><br>
+<input type="text" id="email1">@<input type="text" id="email2" readonly="readonly">
+<select onchange="emails(this.value)">
+<option>이메일 선택</option>
+<option value="naver.com">네이버</option>
+<option value="kakao.com" selected>카카오</option>
+<option value="google.com">구글</option>
+<option value="my">직접입력</option>
+</select>
+<!--  -->
+</body>
+</html>

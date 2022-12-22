@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script src="./jquery.js"></script>
+<script>
+
+// 정석
+$(document).ready(function(){
+	alert("test");
+});
+
+
+// 준 실무
+$().ready(function(){
+	alert("test2");
+});
+
+
+//실무 최대 축약형
+$(function(){
+	alert("test3");
+	var $a = 1;
+	var $b = 5;
+	var $c = $a+$b;
+	console.log($c);
+	var $f;
+	for($f=1;$f<=10;$f++){
+		console.log($f);
+	}
+});
+</script>
+
+
+<body>
+
+</body>
+
+</html>

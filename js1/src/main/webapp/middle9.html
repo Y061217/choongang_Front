@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+
+
+
+<title>js9일차 - 2차배열</title>
+</head>
+<script>
+var data = {
+		"username" : [ //1,2,3은 고유키
+			["홍길동",1],
+			["강감찬",2],
+			["김유신",3]
+		],
+		"age" : [
+			[1,"25"],
+			[2,"29"],
+			[3,"34"]
+		],
+		"blood" : [
+			[1,"AB"],
+			[2,"B"],
+			[3,"O"]			
+		]
+}
+//console.log("키 정보 : " + Object.keys(data));
+//console.log(data["age"]);
+//console.log("데이터의 갯수 : "+data["age"][0].length);
+//console.log(data["age"][1][1]);
+
+var a;
+var b;
+for(a in data){ //3바퀴
+	if(a == "age"){
+		
+	} else {
+	for(b in data[a]){
+		if(a=="username"){
+			//console.log(data[a][b][0]);
+			var nm = data[a][b][0];
+			} 
+		else if(a=="blood"){
+			//console.log(data[a][b][1]);
+			var bld = data[a][b][1];
+			}
+		}
+	}
+}
+
+
+var aa;
+for(aa in data["age"]){
+	Object.keys(data).forEach(function(a1,a2,a3){
+		if(a1 == "username"){
+			var nm = data[a1][aa][0];
+			console.log(nm);
+		}
+		else if (a1 == "blood"){
+			var bld = data[a1][aa][1];
+			console.log(bld);
+		}
+	});
+	//a1 : 배열의 키 이름
+	//a2 : 배열의 번호
+	//a3 : 배열 자체를 출력
+}
+</script>
+<body>
+
+</body>
+</html>

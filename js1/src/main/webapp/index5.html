@@ -1,0 +1,76 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js1일차 - 기본문법(반복문-for)</title>
+</head>
+<script>
+/*
+반복문이란 해당 범위를 지정 후 해당 범위 만큼 반복적으로 작업하는 것을 말합니다.
+
+반복문의 종류
+ 1. for 연산 속도가 가장 느림
+ 2. while 
+ 3. do ~ while 
+ 4. each
+ 5. map
+ 6. forin
+ 7. foreach
+*/
+
+// var a = 1;
+// var i; // 반복문 사용시 적용하는 변수.
+// 		//시작값;종료값;+1씩 증가
+// for (i = 1;  i < 9; i++)
+// 	{console.log(i);}
+		
+// for (i = 10; i > 0;	i --)
+// 	{console.log(i);}
+
+//응용문제 10. 숫자 3부터 17까지 출력되는 반복문을 작성하시오.
+
+// for (var i = 3; i<18; i++)
+// 	{console.log(i);}
+// for (var i = 17; i>2; i--)
+// 	{console.log(i);}
+
+
+//응용문제 10. 숫자 33부터 0까지 출력되는 반복문을 작성하시오.
+// for (var i = 33; i>=0; i--)
+// 	{console.log(i);}
+
+// var a=8;
+// var j;
+// var sum;
+// for(j=9;j>0;j--){
+// 		sum = a * j;
+// 		console.log(sum);
+	
+	
+// }
+	
+//응용문제 11. 구구단
+// var a=2;
+// var j;
+// var sum;
+// for(a=2;a<10;a++){
+// 	for(j=1;j<10;j++){
+// 		sum = a * j;
+// 		console.log(sum);
+// 	}
+	
+// }
+
+
+//if+for
+//1~10까지 반복문 중 짝수만 출력
+
+for(var i=1 ; i<=10 ; i++){ //1~10까지 반복
+	if(i % 2 == 0) { //i값을 2로 계속 나눠서 나머지가 0으로 적용되는 경우에만 아래의 코드를 실행
+		console.log(i);
+	}
+}
+
+</script>
+<body>
+</body>
+</html>

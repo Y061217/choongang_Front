@@ -1,0 +1,96 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 4일차 복습 2 - 기초 문법 및 함수 활용 (상품 수량 페이지)</title>
+</head>
+
+<script>
+
+function ari(a){
+	var tail = document.getElementById("tail");
+	var tail1 = Number(tail.value);
+	switch (a) {
+			case "+" : {
+						tail1++;
+				break;
+			}
+			case "-" : {
+						tail1--;
+						
+				break;
+			}
+		}
+	if(tail1 == 0) 
+		{
+		tail1 = 1;
+		}
+	
+	tail.value = tail1;
+}
+	
+
+</script>
+
+
+<style>
+
+.ulcss {
+	width : 270px;
+	height: 35px;
+	list-style : none;
+	padding : 0;
+	margin : 0;
+}
+
+.licss {	
+	height: 35px;
+	float : left;
+	font-size : 13px;
+}
+.li1 {
+	width : 80px;
+	line-height : 35px;
+}
+.li2 {
+	width : 190px;
+}
+
+.tbx {
+	width : 100px;
+	padding : 0;
+	height: 35px;
+	border : 1px solid blue;
+	margin-right : 5px;
+}
+
+.bx1 {
+	background-color : black;
+	color : white;
+	width : 35px;
+	height: 35px;
+	padding : 0;
+	margin-right : 5px;
+	border : 0;
+}
+
+.b {
+	margin-right : 0;
+}
+</style>
+
+
+<body>
+
+<ul class = "ulcss">
+	<li class = "licss li1">상품 수량</li>
+	<li class = "licss li2">
+	<!-- readonly : 읽기 전용이며, 키보드 또한 마우스로 클릭이 되지 않도록 합니다. -->
+	<input type="text" id = "tail" value="1" class="tbx" readonly="readonly">
+	<input type="button"  value = "+" class = "bx1" onclick="ari(this.value)">
+	<input type="button"  value = "-" class = "bx1 b" onclick="ari(this.value)">
+	</li>
+</ul>
+
+
+</body>
+</html>

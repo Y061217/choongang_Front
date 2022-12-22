@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>js9일차 - get방식 전송 응용 예시</title>
+</head>
+<script>
+function getsync(telno){
+	location.href='http://172.30.1.63:8080/js1/get2.html?tel=' + telno;
+	
+}
+</script>
+<body>
+<ul onclick="getsync('01012344567')">
+<li>홍길동</li>
+<li>01012344567</li>
+<li>hong@nate.com</li>
+</ul>
+<ul onclick="getsync('01012349874')">
+<li>박찬호</li>
+<li>01012349874</li>
+<li>park@nate.com</li>
+</ul>
+</body>
+</html>

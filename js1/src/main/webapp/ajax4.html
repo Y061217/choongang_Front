@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>Ajax 2일차 - 파라미터를 배열로 전송</title>
+<script src="./jquery.js"></script>
+<!-- 공통으로 사용하는 return 함수들 -->
+<script src="./ajax3.js?v=1"></script>
+<script>
+function abc(){
+	var data = [];
+	var w=0;
+	while(w <= 4){
+		var k =	document.getElementById("no"+w).value;
+		//0부터 순차적으로 해당 데이터를 배열화 시킴
+		data[w] = k; 
+		w++;
+	}
+	console.log(data);
+	//document.getElementById("datas").value=data;
+	location.href = './ajax5.html?datas='+data;
+	//받을 때는 어떻게 받나?
+}
+
+</script>
+</head>
+<body>
+<input type="hidden" name="no" id="datas">
+<input type="text" name="no0" id="no0">
+<input type="text" name="no1" id="no1">
+<input type="text" name="no2" id="no2">
+<input type="text" name="no3" id="no3">
+<input type="text" name="no4" id="no4">
+<input type="button" value="전송" onclick="abc()">
+<br>
+<br>
+아이디 : <input type="text" id="mid">
+<input type="button" value="아이디 중복체크" onclick="id_ck()">
+</body>
+<script>
+function id_ck(){
+	var id = document.getElementById("mid");
+	if(id.value=="">{
+		alert("입력");
+	} else {
+		
+	}
+}
+</script>
+<!-- <form method="post" enctype="application/x-www-form-urlencoded" enctype="multiple"> </form>//post전송시 암호화 multiple = 첨부파일 있을때 -->
+</html>

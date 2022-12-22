@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>jq3일차 - 배열 응용</title>
+<script src="jquery.js"></script>
+<script>
+$(function(){
+	const $data = {
+			"usernm" : ["홍","강"],
+			"tel" : ["0101234567","01022224444"],
+			"point" : ["2500","5200"]
+	}
+	const $data2 = {
+		"members" : {
+			"usernm" : ["홍","강"],
+			"tel" : ["0101234567","01022224444"],
+			"point" : ["2500","5200"]
+				
+	}
+}
+	
+	$.each($data,function($a1,$b1){
+		//console.log($a1); //키값
+		//console.log($b1); //배열 전체
+		$.each($data[$a1],function($aa,$bb){
+		//	console.log($bb);
+			
+		});
+	});
+	//대표키가 있을 경우 무조건 Object.keys 사용해야 합니다.
+	//단 맨앞에 $적용해야함
+	//console.log($data2["members"]["point"][0]);
+	$(Object.keys($data2["members"]["usernm"])).each(function($az,$bz){
+		$.each($data2["members"],function($zz,$xx){
+			//console.log($data2["members"][$zz][$bz]);
+		})
+	});
+	$.map($data2["members"],function($ax,$bx){
+		//console.log($bx);
+	});
+	
+
+	
+})
+</script>
+</head>
+<body>
+
+</body>
+</html>

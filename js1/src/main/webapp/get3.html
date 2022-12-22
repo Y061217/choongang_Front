@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>Insert title here</title>
+</head>
+<style>
+
+ul {
+	width : 600px;
+	height : auto;
+	list-style: none;
+	margin: 0;
+	padding:0;
+	
+}
+
+ul:hover{
+	color : #afe1ff;
+}
+
+
+li{
+	width : 150px;
+	float: left;
+	border : 1px solid black;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+</style>
+<body>
+<div id="ull">
+<ul>
+	<li>NO</li>
+	<li>아이디</li>
+	<li>이름</li>
+	<li>연락처</li>
+</ul>
+</div>
+
+
+</body>
+<script>
+var userdata = {
+		  "members":["kimsw","simdongyoung","leesira","jangukjee","baechanghoo"],
+		  "username":["김석환","심동영","이시라","정욱재","배찬호"],
+		  "tels":["01022223333","01045675552","01022337890","01022556667","01032511234"]
+		};
+		
+// 	var a;
+// 	var ids = "";
+// 	var ea = userdata["tels"].length;
+	
+// for(a in userdata["tels"]){
+// 	var id = userdata["members"][a];
+// 	 ids ="<li>"+id+"</li>";
+// 	var name = userdata["username"][a];
+// 	 ids +="<li>"+name+"</li>";
+// 	var tels = userdata["tels"][a];
+// 	 ids +="<li>"+tels+"</li>";
+	 
+// 	 document.getElementById("ul").innerHTML+="<ul onclick=abc('"+id+"')><li>"+ea+"</li>"+ids+"</ul>";	
+// 	ea--;
+// 	 }
+	var count = 1;
+for(a in userdata["tels"]){
+	var lihtml = "";
+	var ids = ""
+		ids = userdata["members"][a]
+	Object.keys(userdata).forEach(function(a1,a2,a3){
+		var id = "<li>"+userdata[a1][a];+"</li>";
+		lihtml += "<li>"+userdata[a1][a];+"</li>"
+		});
+
+	document.getElementById("ull").innerHTML+="<ul onclick=abc('"+ids+"')><li>"+count+"</li>"+lihtml+"</ul>";
+	count++;
+}
+
+
+function abc(target){
+	console.log(target);
+	location.href='http://172.30.1.63:8080/js1/myinfo.html?members='+target;
+}
+</script>
+
+</html>

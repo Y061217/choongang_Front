@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>Insert title here</title>
+</head>
+
+<style>
+.menus{
+	width : 400px;
+	height: 40px;
+}
+
+.menus > span{
+	display: block;
+	width : 100px;
+	height : 40px;
+	float:left;
+	text-align: center;
+	line-height:40px;
+	position: relative;
+}
+.menus > span:after{
+	content : "★";
+	position : absolute;
+	left:50%;
+	margin-left : -10px;
+	top : -20px;
+
+}
+/* after는 오브젝트 기준 : 맨뒤에 적용되는 형태 */
+/* before는 오브젝트 기준 : 맨앞에 적용되는 형태 */
+/* 단 해당 정보를 사용시 : nth 및 postion 속성을 적용 */
+.menus > span:nth-child(4):after{
+	content : "";
+	
+}
+
+</style>
+<body>
+<div class="menus">
+<span>로그인</span>
+<span>회원가입</span>
+<span>1:1문의</span>
+<span>주문확인</span>
+</div>
+</body>
+</html>

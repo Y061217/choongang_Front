@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>js9일차 - get방식 전송</title>
+</head>
+
+<body>
+사용자 아이디 : <div id="i"></div>
+사용자 이메일 : <div id="e"></div>
+사용자 연락처 : <div id="p"></div>
+
+</body>
+<script>
+	//decodeURI : 한글깨짐 방지
+	//decodeURIComponent : 한글 깨짐 방지 및 특수문자 깨짐 방지
+	var uri = decodeURIComponent(window.location.search);
+	var data = uri.split("&tel=");
+	console.log(data[1]);
+	var data2 = data[0].split("&email=");
+	console.log(data2[1]);
+	var data3 = data2[0].split("?mid=");
+	var mid = data3[1];
+	//console.log(data3[1]);
+	document.getElementById("i").innerText = mid;
+	document.getElementById("e").innerText = data2[1];
+	document.getElementById("p").innerText = data[1];
+
+</script>
+</html>

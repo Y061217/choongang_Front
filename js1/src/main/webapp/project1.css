@@ -1,0 +1,120 @@
+
+
+/* CSS 3.0 버전 기능 */
+
+@charset "UTF-8";
+
+
+.all{ /* 전체범위 */
+width:800px;
+height:1000px;
+/* background-color: yellow; */
+font-size: 14px;
+}
+
+.title{ /* 제목 */
+display:block;
+width : 800px;
+height : 60px;
+/* background-color: green; */
+font-size : 40px;
+text-align: center;
+border-bottom:1px solid gray;
+}
+
+.h60{ /* 높이 60 범위 */
+width:800px;
+height:60px;
+border-bottom:1px solid gray;
+line-height: 60px; 
+}
+
+.h90{ /* 높이 90 범위 */
+width:800px;
+height:90px;
+border-bottom:1px solid gray;
+}
+
+.none{ /* 맨밑줄 none */
+border:0;
+/* background-color: green; */
+position: relative;
+}
+
+.box1{ /* id 및 pass 박스 */
+width : 250px;
+height : 40px;
+border-radius: 5px;
+margin-top : 10px;
+}
+
+.box2{ /* 이메일 및 전화번호 박스 */
+width : 620px;
+height : 40px;
+border-radius: 5px;
+margin-top : 10px;
+}
+
+.numnone{ /* 전화번호 박스 넘버만 */
+
+}
+
+.box3{ /* 거주지역 및 현재연령 박스 */
+width : 150px;
+height : 40px;
+border-radius: 5px;
+margin-top : 10px;
+}
+
+.text{ /* 전체 타이틀 텍스트 */
+width : 180px;
+height : 60px;
+float: left;
+}
+.text1{ /* 관심분야 왼쪽 타이틀 텍스트 */
+width : 180px;
+height : 60px;
+margin-top : 25px;
+float: left;
+}
+
+.select1{ /* 관심 분야 왼쪽 범위 */
+width:310px;
+height : 90px;
+float: left;
+/* background-color: red; */
+}
+
+.select2{ /* 관심 분야 오른쪽 범위 */
+width:310px;
+height : 90px;
+float: left;
+/* background-color: skyblue; */
+}
+.list{
+list-style: none; /* li 리스트 none */
+margin-left:-40px;
+}
+
+.btn1{ /* 회원가입 버튼 */
+width:100px;
+height:40px;
+background-color: skyblue;
+border:2px solid blue;
+border-radius: 5px;
+color : white;
+position: absolute;
+top: 10px;
+left:290px;
+}
+.btn2{ /* 가입취소 버튼 */
+width:100px;
+height:40px;
+background-color: gray;
+border:2px solid black;
+border-radius: 5px;
+color : white;
+position: absolute;
+top: 10px;
+left: 410px;
+}

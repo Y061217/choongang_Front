@@ -1,0 +1,103 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Review 01</title>
+</head>
+<style>
+body{
+	margin: 0; 
+	padding: 0;
+	}
+
+.login {
+	width:450px;
+	height:184px;
+	border: 1px solid black;
+	font-size: 12px;
+	margin: 0 auto;
+	padding: 0px;
+	}
+
+p {
+	margin: 3px;
+	}
+	
+.bot {
+	display:block;
+	width:450px;
+	text-align:right;
+	}
+
+.input {
+	width: 300px;
+	height: 30px;
+}
+
+.loginbtn{
+	background-color : darkblue; 
+	width : 150px; 
+	height: 40px;
+	color : white;
+	border: none;
+	}
+</style>
+
+<script>
+
+function load_id(){ //체크박스 클릭 시 해당 HTML ID에 js 값을 전달함.
+	
+	var aa = document.getElementById("memail");
+	var bb = document.getElementById("mpass");
+	aa.value="admin@naver.com"
+	bb.value="admin"
+	if(document.getElementById("stay").value=="Y"){
+		console.log("체크 확인");
+	}
+}
+
+
+function login_ok(){ //로그인 버튼 이벤트 함수
+	var aa = document.getElementById("memail");
+	var bb = document.getElementById("mpass");
+	var f = document.getElementById("f");
+	if(aa.value==""){
+		alert("이메일 주소를 입력 하세요")
+		aa.focus();
+	} else if (bb.value==""){
+		alert("비밀번호를 입력 하세요")
+		bb.focus();
+	} else {
+		//location.href는 name 값으로 절대 값을 전달하지 못합니다.
+		f.submit(); //submit : 버튼에 submit이 있는 것과 동일하게 js에서 form을 컨트롤하여 해당 페이지로 데이터를 전송하는 함수
+		console.log("데이터 전송!");
+	}
+	
+}
+</script>
+
+
+
+
+<body>
+<form name="f" id="f" method="post" action="./js6.jsp">
+<!-- form은 무조건 사용해야 데이터를 전송할 수 있음-->
+<!-- main -->
+<div class="login">
+<!-- top -->
+	<p style="font-size: 15px">&nbsp;<u>회원 로그인</u></p>
+	<p>이메일 주소 입력</p>
+	<input type="text" class="input" name="memail" id="memail">
+	<p>비밀번호 입력 <span style="color:blue;">(비밀번호를 잊어버리셨나요?)</span></p>
+	<input type="password" class="input" name="mpass" id="mpass">
+	<br>
+	<input type="checkbox" name="stay" value="Y" id="stay" onclick="load_id()"><b>로그인 상태유지</b>
+<!-- 실무에서 stay 많이 씀	 value 값 입력 필수-->
+<!-- bot -->
+	<span class="bot">
+		<input type="button" value="로그인" class=loginbtn onclick="login_ok()">
+<!-- button, submit, reset 이 두 타입은 name을 부여하지 않고, submit, reset은 id도 부여하지 않는다. -->
+	</span>
+</div>
+</form>
+</body>
+</html>

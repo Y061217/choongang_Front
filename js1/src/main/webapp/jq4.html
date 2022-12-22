@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>Jquery 2일차 - Jquery 문법</title>
+</head>
+<script src="./jquery.js"></script>
+<script>
+$(function(){
+	$("#f").submit(function(){
+		var $id = $("#mid");
+		var $pw = $("#mpass");
+		if($id.val()==""){
+			alert("아이디를 입력하세요");
+			return false; //없으면 submit이 작동하여 페이지 이동 됨
+		}
+		else if($pw.val()==""){
+			alert("패스워드를 입력하세요");
+			return false; //없으면 submit이 작동하여 페이지 이동 됨
+			
+		} else {
+			this.submit(); //this : 현재 자신의 아이디값을 말합니다.$("#f")
+			//return true;
+			//return;
+			//$("#f").submit();
+		}
+	});
+	
+	
+	//change 함수이며 해당 값을 input에 전달
+	$("#tel").change(function(){
+		//this : #tel을 지칭
+		var $data = $(this).val();
+		$("#cp").val($data);
+	});
+	
+});
+
+</script>
+<body>
+<form id="f" method="post" action="http://naver.com">
+아이디 : <input type="text" id="mid">
+비밀번호 : <input type="password" id="mpass">
+<input type="submit" value="로그인">
+</form>
+<br>
+<br>
+
+<select id="tel">
+<option>통신사</option>
+<option value="kt">KT</option>
+<option value="skt">SKT</option>
+<option value="lg">LG</option>
+</select>
+<br>
+<input type="text" id="cp" readonly="readonly">
+</body>
+</html>

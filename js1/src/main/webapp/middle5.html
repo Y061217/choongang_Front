@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>js8일차 중급 - 1차 배열 응용</title>
+</head>
+<body>
+응용문제2. 해당 배열 데이터를 이용하여 다음과 같은 결과값을 출력하시오. 배열 데이터 값 모두 합산하여 결과 출력
+[10,16,8,7,3,22,19]
+<input type="text" id="ans">
+
+<br>
+응용문제3. 2개의 데이터 배열값이 있습니다. 해당 배열값을 확인하여 콘솔로 결과값 출력
+<br>
+[22,10,4,11,16]   /    [33,7,2,16,8]
+각각의 데이터를 모두 곱하여 두개의 데이터 중 큰 값을 출력
+</body>
+
+<script>
+var nums = [10,16,8,7,3,22,19]
+var i;
+var sum = 0;
+for(i=0;i<nums.length;i++){
+		sum += nums[i];
+}
+document.getElementById("ans").value = sum;
+console.log(sum);
+
+var nums_l = [22,10,4,11,16];
+var nums_r = [33,7,2,16,8];
+var j = 0;
+var k = 0;
+var nums_l_sum = 1;
+var nums_r_sum = 1;
+//두개의 배열 갯수가 같으면 반복문은...
+do{
+	nums_l_sum *= nums_l[j];
+	nums_r_sum *= nums_r[j];
+	
+	j++;
+}while(j < nums_l.length);
+
+// do{
+// 	nums_r_sum *= nums_r[k];
+// 	k++;
+// }while(k < nums_r.length);
+
+console.log(nums_l_sum);
+console.log(nums_r_sum);
+
+	if(nums_l_sum > nums_r_sum){
+		console.log("1번 배열이 더 큼 값 : " + nums_l_sum);
+	} else if (nums_l_sum < nums_r_sum){
+		console.log("2번 배열이 더 큼 값 : " + nums_r_sum);
+	} else {
+		console.log("두 값이 값음");
+	}
+
+</script>
+</html>

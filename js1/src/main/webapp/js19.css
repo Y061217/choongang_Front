@@ -1,0 +1,137 @@
+@charset "UTF-8";
+body {
+	margin : 0;
+	padding : 0;
+
+	
+}
+header{
+	height : 30px;
+	background-color: #ccc;
+	
+}
+
+.top {
+	width: 1100px;
+	height: 30px;
+	background-color: gray;
+	margin: 0 auto;
+}
+
+nav {
+	height: 100px;
+}
+
+.menu {
+	width:1100px;
+	height: 100px;
+	background-color: yellowgreen;
+	margin: 0 auto;
+}
+
+.section_banner {
+	height: 500px;
+	background-color: skyblue;
+}
+
+.banner1 {
+	width: 1100px;
+	height: 500px;
+	background-color: purple;
+	margin : 0 auto;	
+}
+
+.section_product {
+	height: 1000px;
+	
+}
+
+.product {
+	width : 1100px;
+	height: 1000px;
+	background-color: yellow;
+	margin: 0 auto;
+}
+
+.section_board{
+	height: 360px;
+}
+
+.board {
+	width:1100px;
+	height: 360px;
+	background-color: gray;
+	margin : 0 auto;
+	padding-left:30px;
+	padding-right:30px;
+	padding-top:30px;
+	box-sizing: border-box; /* 패딩 추가시 width, height 조정을 안해도 됨*/
+	
+}
+
+.notice {
+	width:520px;
+	height: 310px;
+	background-color: #afe1ff;
+	margin : 0 auto;
+	float: left;
+	
+}
+
+.event {	
+	width:520px;
+	height: 310px;
+	background-color: #ccc;
+	margin : 0 auto;
+	float: left;
+}
+
+footer {
+	height: 545px;
+}
+
+.copyright {
+	width: 1100px;
+	height: 150px;
+	background-color: black;
+	margin: 0 auto;
+}
+
+.floor {
+	width : 100px;
+	height: 450px;
+	background-color: blue;
+	position: fixed; /*브라우저 크기를 기준으로 하는 속성*/
+	left: 50%;
+	margin-left: 600px;
+}
+
+main {
+	width: 1100px;
+	margin : 0 auto;
+}
+
+.popup{
+	display:block;
+	width: 500px;
+	height:500px; 
+	z-index: 0;
+	margin: 250px;
+	position:absolute;
+	left: 50%;
+	margin-left: -250px;
+	background-color: #afe1ff;
+}
+
+.close {
+	width : 50px;
+	height: 50px;
+	background-color: black;
+	font-size: 25px;
+	font-weight: bolder;
+	color: white;
+	text-align: center;
+	line-height: 50px;
+	position: absolute;
+	left: 100%;
+}

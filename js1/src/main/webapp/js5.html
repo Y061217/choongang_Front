@@ -1,0 +1,66 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js3일차 - 이벤트 함수 2</title>
+</head>
+
+<script>
+
+function abc(a){ //li 태그에 onclick 스크립트 호출
+	switch(a) //해당 인자갑을 확인하여 각 case로 연결
+	{
+	case 1 : location.href="http://naver.com";
+	break;
+	case 2 : location.href="http://youtube.com";
+	break;
+	case 3 : location.href="http://daum.net";
+	break;
+	case 4 : location.href="http://nate.com";
+	break;
+		
+	}
+}
+
+function bbb(){ //클릭 시 작동되는 함수
+// 	//1번째 방법 : 전체 아이디 웹경로를 모두 적고 조건문으로 처리
+//  	if(document.getElementById('mid').value==""){
+// 		alert("해당 아이디 값을 입력하세요.");
+// 		document.getElementById('mid').focus();
+		
+// 	}
+	
+	//2번째 방법 : 전체 아이디 웹경로를 변수명에 저장하고 조건문으로 처리, 중복 제거
+ 	var html = document.getElementById('mid');
+	var html2 = document.getElementById('mpass');
+	if(html.value==""){ //아이디 입력 사항 검토
+		alert("해당 아이디 값을 입력"); 
+		html.focus(); //focus 커서가 자동으로 해당 위치로 이동 모바일 경험에서 활용
+	} else if (html2.value==""){ //패스워드 입력 사항 검토
+		alert("패스워드 입력 하세요."); 
+	}
+
+}
+
+</script>
+
+<body>
+
+<ul>
+	<li onclick="abc(1)">메뉴1</li>
+	<li onclick="abc(2)">메뉴2</li>
+	<li onclick="abc(3)">메뉴3</li>
+	<li onclick="abc(4)">메뉴4</li>
+</ul>
+<!--  value 속성 : 사용자가 입력한 값을 저장하는 속성명 입니다. 강제로 값을 미리 입력
+할 수도 있습니다.-->
+
+<input type="text" id = "mid" value="">
+<input type="button" value="클릭" onclick="bbb()">
+<br>
+
+<input type="password" id = "mpass">
+
+
+
+</body>
+</html>

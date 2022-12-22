@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>js 6일차 - 응용문제</title>
+</head>
+<script>
+var cost_all = 0;
+
+function cal(cost,order){
+	var ids = document.getElementById(order);
+	
+	if(ids.checked == true){
+		cost_all += Number(cost);
+		}
+	else if (ids.checked == false){
+		cost_all -= Number(cost);
+		}
+	
+	document.getElementById("pay").value = cost_all.toLocaleString();
+}
+
+function all_ck(){
+	var all = fn.all.checked;
+	var leng = fn.a.length;
+	var w = 0;
+		do{	fn.a[w].checked = all;
+			w++;
+		}while(w<leng)
+		
+	cost_all = 0;
+		if(fn.all.checked == true) {
+			for(w=0;w<leng;w++){
+				cost_all += Number(fn.a[w].value);
+				}
+		}
+	document.getElementById("pay").value = cost_all.toLocaleString();
+}
+
+function ck(cost, order){
+	var all = fn.all.checked;
+	var leng = fn.a.length;
+	var w = 0;
+	var truebox = 0;
+	do{	
+		truebox += fn.a[w].checked
+		w++;
+	}while(w<leng)
+		
+	if(truebox == leng){
+			fn.all.checked = true;
+		} else {
+			fn.all.checked = false;
+		}
+
+	cal(cost, order);
+}
+
+</script>
+
+<body>
+<form name="fn" id="fn">
+<label><input type="checkbox" onclick="all_ck()" name="all">상품 전체선택</label>
+<br>
+<label><input type="checkbox" id="a1" value ="5000" onclick="ck(this.value,'a1')" name="a">A상품 : 5000원</label>
+<br>
+<label><input type="checkbox" id="a2" value ="3000" onclick="ck(this.value,'a2')" name="a">B상품 : 3000원</label>
+<br>
+<label><input type="checkbox" id="a3" value ="8000" onclick="ck(this.value,'a3')" name="a">C상품 : 8000원</label>
+<br>
+<label><input type="checkbox" id="a4" value ="10000" onclick="ck(this.value,'a4')" name="a">D상품 : 10000원</label>
+<br>
+<label><input type="checkbox" id="a5" value ="20000" onclick="ck(this.value,'a5')" name="a">E상품 : 20000원</label>
+
+</form>
+<br>
+총 결제 금액 : <input type="text" id = "pay" value="" readonly="readonly">
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge, chrome=1">
+<meta name="viewport" content="width = device-width">
+<title>jq3일차 - 배열</title>
+<script src="jquery.js"></script>
+<script>
+$(function(){
+	const $data = [3,1,2,4,6];
+	//console.log($data[0]);
+	
+	$data.sort(function($a,$b){
+		return $a-$b;
+	});
+	//console.log($data);
+	
+	var $f;
+	for($f in $data){
+	//	console.log($data[$f]);
+	}
+	
+	var $data2 = {
+			"members" : ["hong", "kim", "park"]
+	}
+	
+	
+	Object.keys($data2["members"]).forEach(function($a1,$a2,$a3){
+		console.log($data2["members"][$a1]);
+	});
+	
+	//map jquery, 배열 전용 반복문
+	$.map($data2,function($a1,$b1){
+	//	console.log($b1);
+	})
+	$.map($data,function($a1,$b1){
+	//	console.log($b1);
+	})
+	$.each($data2,function($aa,$bb){
+		console.log($aa);
+		console.log($bb);
+	})
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>

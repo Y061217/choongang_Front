@@ -1,0 +1,133 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>JS3일차 숙제 = 이벤트 함수 및 연산처리 응용2</title>
+</head>
+
+<style>
+ul {
+	margin : 0;
+	padding : 0;
+	list-style: none;
+
+}
+
+</style>
+
+<script>
+
+function bnt(){
+	
+	document.getElementById("a").innerHTML="<li><input type='button' value='+' onclick='ifs('+')'></li>";
+	document.getElementById("b").innerHTML="<li><input type='button' value='-' onclick='ifs('-')'></li>";
+	document.getElementById("c").innerHTML="<li><input type='button' value='*' onclick='ifs('*')'></li>";
+	document.getElementById("d").innerHTML="<li><input type='button' value='/' onclick='ifs('/')'></li>";
+}
+
+
+function ifs(b){
+	var k = document.getElementById("tbox1").value;
+	var k2 = document.getElementById("tbox2").value;
+	if(Number(k) < 100 || Number(k2) < 100)
+	{
+		console.log("100부터 숫자를 입력하십시오");
+	} else {
+		switch (b) {
+		case "+" : 
+			var sum = Number(k)+Number(k2);
+			
+			break;
+			
+		case "-" : 
+			var sum = Number(k)-Number(k2);
+		
+			break;
+		case "*" : 
+			var sum = Number(k)*Number(k2);
+		
+			break;
+		case "/" : 
+			var sum = Number(k)/Number(k2);
+		
+			break;
+
+		default:
+			break;
+		}
+		console.log(sum);
+		}	
+
+}
+
+function ifs2(a){
+	var k3 = document.getElementById("tbox3").value;
+	var k4 = document.getElementById("tbox4").value;
+	if(Number(k3) < 100 || Number(k4) < 100){
+		console.log("100부터 숫자를 입력하십시오");
+	} else {
+		switch (a) {
+			case "+" : 
+				sum = Number(k3)+Number(k4);
+				
+				break;
+				
+			case "-" : console.log(Number(k3)-Number(k4));
+			
+				break;
+			case "*" : console.log(Number(k3)*Number(k4));
+			
+				break;
+			case "/" : console.log(Number(k3)/Number(k4));
+			
+				break;
+
+			default:
+				break;
+				
+			}
+		console.log(sum);
+	}
+
+}
+
+
+</script>
+
+<body>
+JS 코드<br>
+<input type = "text" id = tbox1 placeholder='첫번째 숫자'>
+<input type = "text" id = tbox2 placeholder='두번째 숫자'>
+
+<ul id=bnt>
+	<li id=a></li>
+	<li id=b></li>
+	<li id=c></li>
+	<li id=d></li>
+</ul>
+
+<br><br>
+HTML 코드<br>
+<input type = "text" id = tbox3  placeholder='첫번째 숫자'>
+<input type = "text" id = tbox4  placeholder='두번째 숫자'>
+<ul>
+	<li><input type='button' value='+' onclick='ifs2(this.value)'></li>
+	<li><input type='button' value='-' onclick='ifs2(this.value)'></li>
+	<li><input type='button' value='*' onclick='ifs2(this.value)'></li>
+	<li><input type='button' value='/' onclick='ifs2(this.value)'></li>
+</ul>
+<!-- 인자값 활용 -->
+<!-- this.value : 해당 태그에 있는 value 값을 함수로 바로 전달할 때 사용하는 js 코드 -->
+
+</body>
+
+
+
+
+
+<script>
+
+bnt();
+
+</script>
+
+</html>

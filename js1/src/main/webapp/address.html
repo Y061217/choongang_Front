@@ -1,0 +1,72 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 4일차 복습 4 - 기초 문법 및 함수 활용 (상품 수량 페이지)</title>
+</head>
+
+<style>
+
+.ro {
+	width : 400px;
+	height: 200px;
+	border : 1px solid black;
+	margin : 0 auto;
+}
+
+
+.bx 
+	{
+	width : 150px;
+	height : 40px;
+	background-color : black;
+	color : white;
+	padding : 0;
+	border : 0;
+
+	}
+
+.ul {
+	width : 400px;
+	height : 150px;
+
+}
+.h {
+	width : 150px;
+	padding : 0;
+	margin: 0 auto;
+}
+</style>
+
+<script>
+function address_close() {
+	self.close();
+// 	자신의 페이지를 강제로 종료할 때 사용하는 함수
+}
+
+function addr(post,add) {
+	//window.opener : 부모창을 말합니다.
+	//부모창에 해당 아이디를 찾아서 값을 자식창에 있는 정보를 전송 시킴
+	window.opener.document.getElementById("add_post").value=post;
+	window.opener.document.getElementById("addr").value=add;
+	self.close();
+	
+}
+
+</script>
+
+<body>
+<div class="ro">
+<div class="h">[도로명 주소 리스트]</div>
+<ul>
+<li onclick="addr('00001' , '서울시 강남구 강남동 21-1')">(00001) 서울시 강남구 강남동 21-1</li>
+<li onclick="addr('00002' , '서울시 종로구 종로5가 22')">(00002) 서울시 종로구 종로5가 22</li>
+<li onclick="addr('00003' , '서울시 영등포구 영등포동 32-7')">(00003) 서울시 영등포구 영등포동 32-7</li>
+<li onclick="addr('00004' , '서울시 강서구 화곡동 67')">(00004) 서울시 강서구 화곡동 67</li>
+</ul>
+<div class="h">
+<input type = "button" value = "창닫기" class="bx" onclick="address_close()">
+</div>
+
+</div>
+</body>
+</html>

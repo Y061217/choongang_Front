@@ -1,0 +1,44 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>js 1일차 - 기본문법 (이중 포문)</title>
+</head>
+<script>
+
+// var a,b,c;
+
+// for (a=1;a<=5;a++){ //큰 for문
+	
+// 	for (b=1;b<4;b++){ //작은 for문
+// 		c = a+b;
+// 		console.log(c);
+// 	}
+
+// }
+
+// 큰 for문이 1회전 마다 작은 for문 3회전 적용
+
+//응용문제 16. 구구단 2 * 1 ~ 5 * 5 결과 값이 출력되는 반복문 작성
+ var x,y,z;
+// for(x=2;x<6;x++){
+// 	for(y=1;y<6;y++){
+// 		z = x * y;
+// 		console.log(x + "*"+ y + "=" + z);
+// 	}
+// }
+
+
+//응용문제 17. 구구단 8단~ 4단까지 역순으로 출력하는 반복문 작성
+
+for(x=8;x>3;x--){ //8 ~ 4 까지
+	for(y=9;y>0;y--){ // 9 ~ 1 까지
+		z = x * y;
+		console.log(x + "*"+ y + "=" + z);
+	}
+}
+
+</script>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+
+<title>js 6일차 - HTML5 + JS 4.0 - 탭 아이콘 생성 및 전역,지역 변수</title>
+<link href="./face.ico" type="image/x-icon" rel="shortcut icon">
+<!-- ico파일을 이용해서 탭에 아이콘을 출력, 또는 
+모바일에서 바로 가기를 만들 경우 해당 아이콘이 적용됨. -->
+
+</head>
+
+<script>
+	var a = "홍길동"; //전역변수 : 필드(함수 외부)에 선언한 변수로 모든 함수에서 사용 할 수 있다.
+	var c; //전역변수 이름만 생성 값은 없음
+	function aaa(){
+		console.log(a);
+		
+	}
+	function bbb(){
+		a = "유관순"; //전역변수 값을 변경하는 부분
+		console.log(a);
+	}
+	function ccc(){
+		var b = "강감찬"; //지역 변수 : 함수 내에서 선언한 변수로 함수 내에서만 사용할 수 있다.
+						//확장함수가 있더라도 옮겨가지 않는다. 
+		var a = "세종" //지역 변수 a 생성
+		ddd();
+		
+		
+	}
+	
+	function ddd(){
+		console.log(a); //전역변수 a 호출
+		console.log(b); //값을 확인하지 못 함
+	}
+aaa();
+ccc();
+ddd();
+
+//전역 변수, 지역 변수
+</script>
+
+
+<body>
+
+</body>
+</html>

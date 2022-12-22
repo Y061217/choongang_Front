@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>Insert title here</title>
+</head>
+<body>
+[사용자 포인트 정보 확인]<br>
+고객명 : <span id = name></span><br>
+이메일 : <span id = email></span><br>
+적립금 : <span id = money></span>
+</body>
+
+<script>
+
+var points={
+		  "members":["kimsw","simdongyoung","leesira","jangukjee","baechanghoo"],
+		  "email":["kimsw@nate.com","simdongyoung@gmail.com","leesira@nate.com","jangukjee@nate.com","baechanghoo@naver.com"],
+		  "points":[3500,2800,4200,5150,6100]
+		};
+	
+var uri = window.location.search;
+var nm = uri.split("?members=");
+var ori_data = nm[1]; 
+var f;
+var e;
+var count = 0;
+//전체 찾기 아무거나 날려라~
+// for(f in points){
+// 	 for(e in points[f]){
+// 		//console.log(points[f][e]);
+// 			if(points[f][e]==ori_data){
+// 				document.getElementById("name").innerText=points["members"][e];
+// 				document.getElementById("email").innerText=points["email"][e];
+// 		 		document.getElementById("money").innerText=points["points"][e];
+// 		 		count++;
+// 		}
+// 	 }
+//  }
+//필터 하나일때
+for(e in points["points"]){
+	 		if(points["members"][e]==ori_data){
+				document.getElementById("name").innerText=points["members"][e];
+				document.getElementById("email").innerText=points["email"][e];
+		 		document.getElementById("money").innerText=points["points"][e];
+		 		count++;
+		}
+	 }
+ if(count==0){
+		alert("해당 데이터를 확인하지 못하였습니다.");
+		history.go(-1);
+	}
+
+
+
+
+</script>
+</html>

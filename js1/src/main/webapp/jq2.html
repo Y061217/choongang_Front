@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-ua-compatible" content="IE=edge chorme=1">
+<meta name="viewport" content = "width=device-width">
+<title>Jquery 2일차 - Jquery 문법</title>
+</head>
+<script src="./jquery.js"></script>
+<script>
+$(document).ready(function(){
+
+	var $a = 10; // var 변수값, 동일한 변수명 모두 변경이 가능함
+	let $b = 20; // left 선언시 해당 변수의 값만 변경이 가능
+	const $c = 100; // const 한번 선언 후 값과 이름을 모두 변경할 수 없음(상수)
+	
+// 	var $a = 100; // 변수명, 값 모두 변경 가능
+// 	//$b = 200;  // 값 변경 가능
+// 	//$c = 1000; // 오류 발생
+// 	if($a > $b){
+// 		alert("$a 값이 더 큽니다.");
+// 	} else {
+// 		alert("$b 값이 더 큽니다.");
+// 	}
+	
+// 	for($a=10;$a<=$b;$a++){
+// 		console.log($a);
+// 	}
+	
+// 	let $w = 2;
+// 	let $j = 6;
+// 	while($w < $j){
+// 		let $i = 1;
+// 		while($i < 10){
+// 			let rsl = $w * $i;
+// 			console.log($w +"*"+$i+"="+rsl);
+// 			$i++;
+// 		}
+// 		$w++;
+// 	}
+
+
+// var $s = 1;
+// switch($s){
+// case 1: console.log("숫자 1입니다.");
+// 	break;
+// case 2: console.log("숫자 2입니다.");
+// 	break;
+// default: console.log("확인되지 않습니다.");
+// 	break;
+// }
+
+
+	var $data = "100"; //$표시를 안해도 작동은 하지만, java스크립트와 헷갈릴 수 있으므로 $를 꼭 해두자
+						//j쿼리가 자바스크립트보다 늦게 실행된다.
+	console.log("j쿼리" + $data);
+});
+function d(){
+	var data = "200";
+	console.log("java" + data);
+}
+d();
+/* 응용문제 jquery로 2~5단까지 출력되는 구구단을 작성하시오 */
+</script>
+<body>
+
+</body>
+</html>
