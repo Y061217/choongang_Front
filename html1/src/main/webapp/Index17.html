@@ -1,0 +1,80 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML Day03 - 설문조사 프로그램</title>
+</head>
+<style>
+
+body {
+	margin: 0;
+	padding: 0;
+	
+}
+
+
+.poll {
+	width:300px;
+	height:500px;
+	border:1px solid black;
+}
+
+
+.q {
+	width: 300px;
+	height: 40px;
+	display: block;
+	background-color: orange;
+	text-align: center;
+	line-height: 40px;
+	
+}
+
+.poll_ol {
+	width: 300px;
+	height:400px;
+	list-style : none;
+	margin: 0;
+	padding: 0;
+
+}
+
+.poll_li {
+	width : 300px;
+	height: 80px;
+	line-height: 80px;
+	
+}
+
+.ok {
+	display : block;
+	width : 300px;
+	height: 60px;
+	background-color: yellow;
+	
+	
+}
+.btn {
+	width : 300px;
+	height: 60px;
+	
+}
+</style>
+<!-- 설문조사에 사용되는 name값 agree -->
+<body>
+<form method="post" action="./pollok.jsp">
+<div class="poll">
+	<span class="q">Q. 가장 어려운 과목은 무엇인가요?</span>
+	<ol class="poll_ol">
+		<li class="poll_li"><input type="radio" name="agree" value="HTML & CSS">HTML & CSS</li>
+		<li class="poll_li"><input type="radio" name="agree" value="Javascript">Javascript</li>
+		<li class="poll_li"><input type="radio" name="agree" value="Java">Java</li>
+		<li class="poll_li"><input type="radio" name="agree" value="Database">Database</li>
+		<li class="poll_li"><input type="radio" name="agree" value="Ajax">Ajax</li>
+	</ol>
+	<span class="ok">
+	<input type="submit" value="설문조사 참여" class="btn">
+	</span>
+</div>
+</form>
+</body>
+</html>

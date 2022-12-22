@@ -1,0 +1,49 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML Day03 - 4.0 Drop Menu</title>
+</head>
+<style>
+body {
+	margin:0;
+	padding:0;
+}
+.menu {
+	width: 102px;
+	height: 160px;
+	background-color:yellow;
+	list-style: none;
+/* 	디스크 또는 숫자 목록을 보이지 않도록 하는 속성 */
+	margin:0;
+	padding:0;
+	
+/* 디스크와 숫자가 보이지 않을 경우 여백 삭제 */
+} 
+
+.menu_li {
+	width:100px;
+	height: 30px;
+	border: 1px solid #ccc;
+	text-align: center;
+	line-height: 30px;
+	font-size: 12px;
+}
+
+</style>
+<script>
+function bbd() {
+	location.href="http://google.com";
+	
+}
+</script>
+<body>
+<ol class="menu">
+	<li class="menu_li" onclick="bbd()">고객센터</li>
+	<!-- li에 onclick을 이용하여 자바스크립트를 이용해서 페이지 이동이 된다. J.query는 모바일에서 작동하지 않는다-->
+	<li class="menu_li">FAQ</li>
+	<li class="menu_li">Q&A</li>
+	<li class="menu_li">교환/반품접수</li>
+	<li class="menu_li">환불정보</li>
+</ol>
+</body>
+</html>

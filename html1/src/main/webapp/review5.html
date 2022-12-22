@@ -1,0 +1,107 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Roboto:wght@900&display=swap" rel="stylesheet">
+</head>
+
+<style>
+body {
+	margin:0;
+	padding:0;
+font-family: 'Noto Sans KR', sans-serif;
+font-size: 15px;
+}
+
+.system {
+width: 402px;
+height: 126px;
+
+}
+
+span {
+	display: block;
+	margin: 0px;
+	float: left;
+	border: none;
+}
+
+.tbx {
+	width : 150px;
+	height:40px;
+	line-height: 40px;
+	text-align: center;
+}
+
+.ibx {
+width: 250px;
+height: 40px;
+border: 1px solid black;
+
+
+	
+}
+
+input {
+width: 250px;
+height: 40px;
+border: none;
+	
+	}
+
+input:focus{
+	background :none;
+}
+
+.palm {
+	background-image : url("./palm.svg");
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position: 220px 4px;
+}
+
+
+
+ul{
+	width:410px;
+	height: 126px;
+	padding: 0;
+	margin: 0;
+}
+
+li{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+	}
+	
+</style>
+<body>
+<div class="system">
+	<span class="tbx">아이디</span>
+	<span class="ibx"><input type="text" class="palm"></span>
+	<span class="tbx">패스워드</span>
+	<span class="ibx"><input type="password"  class="palm"></span>
+	<span class="tbx">이메일</span>
+	<span class="ibx"><input type="text"></span>
+
+
+</div>
+<span class="palm"></span>
+
+<br><br><br><br>
+
+<ul>
+	<li class="tbx">아이디</li>
+	<li class="ibx"><input type="text" class="palm"></li>
+	<li class="tbx">패스워드</li>
+	<li class="ibx"><input type="password" class="palm"></li>
+	<li class="tbx">이메일</li>
+	<li class="ibx"><input type="text"></li>
+</ul>
+</body>
+
+</html>

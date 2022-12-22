@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Day 02 - form</title>
+</head>
+<script>
+function naver() {
+	location.href='http://naver.com'
+}
+</script>
+<body>
+<!-- method 는 get | post 형태로 데이터의 입력을 받거나 전송합니다.
+	 action은 이동할 URL 입니다. 
+	 get 전송시 : URI에 해당 정보가 출력되면서 전송함
+	 post 전송시 : 암호화된 데이터를 이용하여 해당 URL로 전송-->
+<form name = "f" method = "get" action="./Index07.html">
+<input type="text" name ="ID">
+<br>
+<input type="password" name ="PW">
+<br>
+<input type="button" value="검색">
+<input type="button" value="로그인" onclick="naver()">
+<input type="reset" value="초기화">
+</form>
+<!-- form은 데이터를 전송할 때 사용하는 HTML 태그 입니다. 
+유일한 통신 태그 input type submit : 무조건 form 안에서 작동을 시켜야 합니다.
+submit에는 절대 onclick 속성을 사용하지 않습니다.
+submit, reset은 하나의 form에 한번만 사용할 수 있습니다.-->
+</body>
+</html>

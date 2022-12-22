@@ -1,0 +1,76 @@
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>HTML 6일차 - padding</title>
+</head>
+<style>
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.bx1 {
+	width: 100px;
+	height: 100px;
+	background-color: blue;
+}
+/* padding 은 안쪽 여백입니다. 적용 시 width height 값을 변경해 오브젝트 크기를 조절해야합니다. */
+
+.bx2 {
+	width: 300px;
+	height: 300px;
+	background-color: black;
+	padding-top: 200px;
+	padding-left:200px;
+}
+
+.bx3 {
+	width: 100px;
+	height: 100px;
+	background-color: white;
+	margin-left: 200px;
+	padding: 0px;
+}
+/* margin top, bottom은 상위태그를 포함해서 작동한다. 따라서 하위 태그에는 사용하지 않는다.*/
+
+.t1 {
+	background-color: purple;
+	width: 300px;
+	height: 300px;
+	padding: 50px;
+}
+
+.t2 {
+	background-color: olive;
+	width: 200px;
+	height: 200px;
+	padding: 50px;
+}
+
+.t3 {
+	background-color: skyblue;
+	width: 100px;
+	height: 100px;
+	padding: 50px;
+}
+
+/* padding 또한 단축 명령어를 사용할 수 있으며 시계 방향순으로 적용됩니다. */
+</style>
+
+<body>
+
+<div class="bx1"></div>
+<div class="bx2"><div class="bx3"></div></div>
+
+응용문제
+<div class="t1">
+	<div class="t2">
+		<div class="t3"></div>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>
